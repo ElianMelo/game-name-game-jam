@@ -33,6 +33,7 @@ public class EnemyController : MonoBehaviour
         {
             currentHealth = 0;
             healthBar.UpdateHealth(currentHealth, health);
+            GameManager.Instance.AddCoin(5);
             Death();
         } else
         {

@@ -22,7 +22,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnUnit()
     {
-        if (GameManager.Instance.CurrentState == GameState.Upgrade) return;
+        if (GameManager.Instance.CurrentState != GameState.KaijuControl) return;
         currentSpawnTime -= Time.deltaTime;
         if (currentSpawnTime > 0) return;
         currentSpawnTime = spawnTime;

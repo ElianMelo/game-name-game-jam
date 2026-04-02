@@ -9,7 +9,6 @@ public class PlayerAttackController : MonoBehaviour
     [SerializeField] private InputActionReference attack;
     [SerializeField] private float damage;
     [SerializeField] private float radius = 0.5f;
-    [SerializeField] private float distance = 5f;
     [SerializeField] public LayerMask layerMask;
 
     private float currentAttackCooldown;
@@ -29,7 +28,7 @@ public class PlayerAttackController : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.CurrentState == GameState.Upgrade) return;
+        if (GameManager.Instance.CurrentState != GameState.KaijuControl) return;
         if (canAttack) return;
         currentAttackCooldown -= Time.deltaTime;
         if(currentAttackCooldown <= 0)

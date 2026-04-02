@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.Instance.CurrentState == GameState.Upgrade) return;
+        if (GameManager.Instance.CurrentState != GameState.KaijuControl) return;
         if (Keyboard.current.tKey.wasPressedThisFrame)
         {
             ReceiveDamage();

@@ -4,13 +4,15 @@ using UnityEngine;
 public enum GameState
 {
     Upgrade,
-    KaijuControl
+    KaijuControl,
+    Pause
 }
 
 public class GameManager : MonoBehaviour
 {
     public float timerMaxAmount;
     public float timerCurrentAmount;
+    public int coin;
 
     public GameState currentState;
 
@@ -35,6 +37,20 @@ public class GameManager : MonoBehaviour
         InterfaceManager.Instance.UpdateTimer(timerCurrentAmount);
     }
 
+    public void AddCoin(int amount)
+    {
+        coin += amount;
+        InterfaceManager.Instance.UpdateCoin(coin);
+    }
+
+    public bool AttemptRemoveCoin(int amount)
+    {
+        if (amount > coin) return false;
+        coin -= amount;
+        InterfaceManager.Instance.UpdateCoin(coin);
+        return true;
+    }
+
     private void UpdateGameTimer()
     {
         if (CurrentState != GameState.KaijuControl) return;
@@ -48,6 +64,7 @@ public class GameManager : MonoBehaviour
 
     public void EndUpgradePhase()
     {
+        timerCurrentAmount = timerMaxAmount;
         ChangeGameState(GameState.KaijuControl);
     }
 
