@@ -12,6 +12,17 @@ public class EnemyController : MonoBehaviour
     {
         currentHealth = health;
         healthBar.UpdateHealth(currentHealth, health);
+        GameManager.OnGameStateChanged += OnGameStateChanged;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.OnGameStateChanged -= OnGameStateChanged;
+    }
+
+    private void OnGameStateChanged(GameState gamestate)
+    {
+        if (gamestate == GameState.Upgrade) Death();
     }
 
     public void ReceiveDamage(float amount)

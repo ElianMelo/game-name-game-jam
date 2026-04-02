@@ -22,6 +22,7 @@ public class PlayerMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.CurrentState == GameState.Upgrade) return;
         GetInputsActions();
         SpeedControl();
         if(moveDirection != Vector3.zero)
@@ -30,6 +31,7 @@ public class PlayerMovementController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GameManager.Instance.CurrentState == GameState.Upgrade) return;
         Move();
     }
 

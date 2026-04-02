@@ -29,6 +29,7 @@ public class PlayerAttackController : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.CurrentState == GameState.Upgrade) return;
         if (canAttack) return;
         currentAttackCooldown -= Time.deltaTime;
         if(currentAttackCooldown <= 0)

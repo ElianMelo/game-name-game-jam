@@ -1,16 +1,27 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private float currentHealth;
+
     void Start()
     {
-        
+        currentHealth = KaijuUpgradeManager.Instance.maxHealth;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (GameManager.Instance.CurrentState == GameState.Upgrade) return;
+        if (Keyboard.current.tKey.wasPressedThisFrame)
+        {
+            ReceiveDamage();
+        }
+        InterfaceManager.Instance.UpdateKaijuHealth(currentHealth, KaijuUpgradeManager.Instance.maxHealth);
+    }
+
+    private void ReceiveDamage()
+    {
+        currentHealth -= 10f;
     }
 }
