@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] private float health;
+    [SerializeField] private HealthBar healthBar;
 
     private float currentHealth;
     private bool isDead = false;
@@ -10,6 +11,7 @@ public class EnemyController : MonoBehaviour
     private void Start()
     {
         currentHealth = health;
+        healthBar.UpdateHealth(currentHealth, health);
     }
 
     public void ReceiveDamage(float amount)
@@ -19,7 +21,11 @@ public class EnemyController : MonoBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = 0;
+            healthBar.UpdateHealth(currentHealth, health);
             Death();
+        } else
+        {
+            healthBar.UpdateHealth(currentHealth, health);
         }
     }
 

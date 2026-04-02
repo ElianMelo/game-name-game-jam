@@ -56,7 +56,6 @@ public class PlayerAttackController : MonoBehaviour
 
         foreach (var hit in hits)
         {
-            Debug.Log("Inside: " + hit.name);
             RegisterTriggerContact(hit);
         }
     }
