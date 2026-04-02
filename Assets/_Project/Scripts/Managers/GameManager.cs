@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         timerCurrentAmount = timerMaxAmount;
+        EndUpgradePhase();
     }
 
     void Update()
