@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovementController : MonoBehaviour
 {
@@ -6,20 +7,16 @@ public class PlayerMovementController : MonoBehaviour
     private Rigidbody playerRb;
     private float horizontalInput;
     private float verticalInput;
-
-    [Header("Movement")]
-    private float moveSpeed;
-    private float regularMoveSpeed;
-
     private Vector3 moveDirection;
 
-    private PlayerControls controls;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private InputActionReference move;
+    [SerializeField] private Transform transformVisual;
 
     void Start()
     {
         playerAnimator = GetComponent<Animator>();
         playerRb = GetComponent<Rigidbody>();
-        controls = new PlayerControls();
     }
 
     // Update is called once per frame
@@ -27,6 +24,8 @@ public class PlayerMovementController : MonoBehaviour
     {
         GetInputsActions();
         SpeedControl();
+        if(moveDirection != Vector3.zero)
+            transformVisual.forward = moveDirection;
     }
 
     private void FixedUpdate()
@@ -36,15 +35,16 @@ public class PlayerMovementController : MonoBehaviour
 
     private void Move()
     {
-        moveDirection = new Vector3(verticalInput, 0f, horizontalInput);
-        playerRb.linearVelocity = moveDirection;
+        moveDirection = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
+        moveDirection.y = 0f;
+        playerRb.linearVelocity = moveDirection * moveSpeed;
     }
 
     private void GetInputsActions()
     {
-        Vector2 movement = controls.Player.Move.ReadValue<Vector2>();
-        horizontalInput = movement.x;
-        verticalInput = movement.y;
+        Vector2 movement = move.action.ReadValue<Vector2>();
+        horizontalInput = movement.y * -1;
+        verticalInput = movement.x;
     }
 
     private void SpeedControl()
