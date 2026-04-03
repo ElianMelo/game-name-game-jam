@@ -1,9 +1,16 @@
 using UnityEngine;
 
+public enum EnemyType
+{
+    Moving,
+    Stationary
+}
+
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField] private float health;
-    [SerializeField] private HealthBar healthBar;
+    public float health;
+    public EnemyType enemyType;
+    private HealthBar healthBar;
 
     private float currentHealth;
     private bool isDead = false;
@@ -11,6 +18,7 @@ public class EnemyController : MonoBehaviour
     private void Start()
     {
         currentHealth = health;
+        healthBar = GetComponentInChildren<HealthBar>();
         healthBar.UpdateHealth(currentHealth, health);
         GameManager.OnGameStateChanged += OnGameStateChanged;
     }
