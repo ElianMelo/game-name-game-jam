@@ -12,9 +12,11 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] private InputActionReference move;
     [SerializeField] private Transform transformVisual;
 
+    private const string MovingAnim = "Moving";
+
     void Start()
     {
-        playerAnimator = GetComponent<Animator>();
+        playerAnimator = GetComponentInChildren<Animator>();
         playerRb = GetComponent<Rigidbody>();
     }
 
@@ -46,6 +48,7 @@ public class PlayerMovementController : MonoBehaviour
         Vector2 movement = move.action.ReadValue<Vector2>();
         horizontalInput = movement.y * -1;
         verticalInput = movement.x;
+        playerAnimator.SetBool(MovingAnim, movement.x != 0 || movement.y != 0);
     }
 
     private void SpeedControl()

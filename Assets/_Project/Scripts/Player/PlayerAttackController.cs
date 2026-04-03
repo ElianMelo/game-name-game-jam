@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,9 +8,26 @@ public class PlayerAttackController : MonoBehaviour
     [SerializeField] private float attackActiveDuration;
     [SerializeField] private InputActionReference attack;
     [SerializeField] public LayerMask layerMask;
+    [SerializeField] public float windupSeconds;
 
+    private Animator animator;
     private float currentAttackCooldown;
-    private bool canAttack;
+    private bool canAttack = false;
+    private bool isAttackLeft = true;
+    private Coroutine delayedHitCoroutine;
+
+    private const string AttackLeftAnim = "AttackLeft";
+    private const string AttackRightAnim = "AttackRight";
+
+    private void Awake()
+    {
+        animator = GetComponentInChildren<Animator>();
+    }
+
+    private void Start()
+    {
+        currentAttackCooldown = 1f;
+    }
 
     private void OnEnable()
     {
@@ -45,6 +63,17 @@ public class PlayerAttackController : MonoBehaviour
     private void AttemptAttack(InputAction.CallbackContext context)
     {
         if (!canAttack) return;
+        canAttack = false;
+        isAttackLeft = !isAttackLeft;
+        animator.SetTrigger(isAttackLeft ? AttackLeftAnim : AttackRightAnim);
+
+        if (delayedHitCoroutine != null) StopCoroutine(delayedHitCoroutine);
+        delayedHitCoroutine = StartCoroutine(DelayedHit());
+    }
+
+    private IEnumerator DelayedHit()
+    {
+        yield return new WaitForSeconds(windupSeconds);
 
         Collider[] hits = Physics.OverlapSphere(
             sphereCastOrigin.position,

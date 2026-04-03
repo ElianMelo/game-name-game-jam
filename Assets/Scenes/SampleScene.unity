@@ -1547,7 +1547,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &586748683
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3894,8 +3894,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbe96d6653d79624dab8f7db58c19829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  timerMaxAmount: 10
-  timerCurrentAmount: 10
+  timerMaxAmount: 30
+  timerCurrentAmount: 30
   coin: 0
   currentState: 1
 --- !u!1001 &3089162682780913791
@@ -4027,9 +4027,9 @@ MonoBehaviour:
   _maxHealth: 100
   _healthRegen: 100
   _damage: 20
-  _range: 1.12
+  _range: 2
   _speed: 10
-  _attackSpeed: 0.2
+  _attackSpeed: 1
   _skillCooldown: 100
 --- !u!4 &6704276195125163336
 Transform:
@@ -4061,8 +4061,8 @@ MonoBehaviour:
   _health: 100
   _damage: 20
   _speed: 10
-  _range: 1.12
-  _attackSpeed: 0.2
+  _range: 2
+  _attackSpeed: 1
   _amountOfTroop: 10
   _amountOfGroups: 10
 --- !u!1001 &7437336245660478834
