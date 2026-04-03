@@ -4,11 +4,8 @@ using UnityEngine.InputSystem;
 public class PlayerAttackController : MonoBehaviour
 {
     [SerializeField] private Transform sphereCastOrigin;
-    [SerializeField] private float attackCooldown;
     [SerializeField] private float attackActiveDuration;
     [SerializeField] private InputActionReference attack;
-    [SerializeField] private float damage;
-    [SerializeField] private float radius = 0.5f;
     [SerializeField] public LayerMask layerMask;
 
     private float currentAttackCooldown;
@@ -33,15 +30,16 @@ public class PlayerAttackController : MonoBehaviour
         currentAttackCooldown -= Time.deltaTime;
         if(currentAttackCooldown <= 0)
         {
-            currentAttackCooldown = 0;
+            currentAttackCooldown = KaijuUpgradeManager.Instance.AttackSpeed;
             canAttack = true;
         }
     }
 
     private void OnDrawGizmos()
     {
+        if (KaijuUpgradeManager.Instance == null) return;
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(sphereCastOrigin.position, radius);
+        Gizmos.DrawWireSphere(sphereCastOrigin.position, KaijuUpgradeManager.Instance.Range);
     }
 
     private void AttemptAttack(InputAction.CallbackContext context)
@@ -50,7 +48,7 @@ public class PlayerAttackController : MonoBehaviour
 
         Collider[] hits = Physics.OverlapSphere(
             sphereCastOrigin.position,
-            radius,
+            KaijuUpgradeManager.Instance.Range,
             layerMask
         );
 
@@ -63,6 +61,6 @@ public class PlayerAttackController : MonoBehaviour
     public void RegisterTriggerContact(Collider other)
     {
         EnemyController enemyController = other.GetComponent<EnemyController>();
-        enemyController.ReceiveDamage(damage);
+        enemyController.ReceiveDamage(KaijuUpgradeManager.Instance.Damage);
     }
 }

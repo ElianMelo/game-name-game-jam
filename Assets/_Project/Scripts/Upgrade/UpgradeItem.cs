@@ -8,12 +8,18 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public Color unlockedColor;
     public Color lockedColor;
     public Color hoverColor;
-    public int upgradeCost;
+    
     public int phases;
     public TMP_Text phaseText;
 
     public Image background;
     public Button selfButton;
+
+    [Header("Upgrade Info")]
+    public UpgradeClass upgradeClass;
+    public UpgradeType upgradeType;
+    public float amountValue;
+    public int upgradeCost;
 
     private bool isUnlocked;
     private int currentPhase = 0;
@@ -52,7 +58,11 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     private void ApplyUpgradeEffect()
     {
-        // todo: upgrade effect
+        switch (upgradeClass)
+        {
+            case UpgradeClass.Kaijuu: KaijuUpgradeManager.Instance.BuyUpgrade(upgradeType, amountValue); return;
+            case UpgradeClass.Troop: TroopUpgradeManager.Instance.BuyUpgrade(upgradeType, amountValue); return;
+        }
     }
 
     private void UnlockUpgrade()

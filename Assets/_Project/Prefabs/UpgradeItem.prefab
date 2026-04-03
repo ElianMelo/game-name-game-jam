@@ -321,11 +321,14 @@ MonoBehaviour:
   unlockedColor: {r: 0, g: 1, b: 0.99999976, a: 1}
   lockedColor: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
   hoverColor: {r: 1, g: 0.9696857, b: 0, a: 1}
-  upgradeCost: 10
   phases: 5
   phaseText: {fileID: 3729206709627932553}
   background: {fileID: 2303199983571449417}
   selfButton: {fileID: 7490475358098467196}
+  upgradeClass: 0
+  upgradeType: 0
+  amountValue: 5
+  upgradeCost: 10
 --- !u!1 &3938429336974249897
 GameObject:
   m_ObjectHideFlags: 0

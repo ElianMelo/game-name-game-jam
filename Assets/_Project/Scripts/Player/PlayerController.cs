@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        currentHealth = KaijuUpgradeManager.Instance.maxHealth;
+        currentHealth = KaijuUpgradeManager.Instance.MaxHealth;
     }
 
     void Update()
@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
         {
             ReceiveDamage();
         }
-        InterfaceManager.Instance.UpdateKaijuHealth(currentHealth, KaijuUpgradeManager.Instance.maxHealth);
+        InterfaceManager.Instance.UpdateKaijuHealth(currentHealth, KaijuUpgradeManager.Instance.MaxHealth);
     }
 
     private void ReceiveDamage()

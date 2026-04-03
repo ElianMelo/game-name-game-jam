@@ -9,7 +9,6 @@ public class PlayerMovementController : MonoBehaviour
     private float verticalInput;
     private Vector3 moveDirection;
 
-    [SerializeField] private float moveSpeed;
     [SerializeField] private InputActionReference move;
     [SerializeField] private Transform transformVisual;
 
@@ -39,7 +38,7 @@ public class PlayerMovementController : MonoBehaviour
     {
         moveDirection = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
         moveDirection.y = 0f;
-        playerRb.linearVelocity = moveDirection * moveSpeed;
+        playerRb.linearVelocity = moveDirection * KaijuUpgradeManager.Instance.Speed;
     }
 
     private void GetInputsActions()
@@ -53,9 +52,9 @@ public class PlayerMovementController : MonoBehaviour
     {
         Vector3 flatVel = new Vector3(playerRb.linearVelocity.x, 0f, playerRb.linearVelocity.z);
 
-        if (flatVel.magnitude > moveSpeed)
+        if (flatVel.magnitude > KaijuUpgradeManager.Instance.Speed)
         {
-            Vector3 limitedVel = flatVel.normalized * moveSpeed;
+            Vector3 limitedVel = flatVel.normalized * KaijuUpgradeManager.Instance.Speed;
             playerRb.linearVelocity = new Vector3(limitedVel.x, playerRb.linearVelocity.y, limitedVel.z);
         }
     }
