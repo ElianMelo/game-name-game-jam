@@ -11,6 +11,7 @@ public class PlayerAttackController : MonoBehaviour
     [SerializeField] public float windupSeconds;
 
     private Animator animator;
+    private PlayerController playerController;
     private float currentAttackCooldown;
     private bool canAttack = false;
     private bool isAttackLeft = true;
@@ -22,6 +23,7 @@ public class PlayerAttackController : MonoBehaviour
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
+        playerController = GetComponent<PlayerController>();
     }
 
     private void Start()
@@ -66,6 +68,7 @@ public class PlayerAttackController : MonoBehaviour
         canAttack = false;
         isAttackLeft = !isAttackLeft;
         animator.SetTrigger(isAttackLeft ? AttackLeftAnim : AttackRightAnim);
+        playerController.ChangeState(PlayerState.Attacking);
 
         if (delayedHitCoroutine != null) StopCoroutine(delayedHitCoroutine);
         delayedHitCoroutine = StartCoroutine(DelayedHit());

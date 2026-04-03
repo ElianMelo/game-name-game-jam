@@ -1,12 +1,21 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+public enum PlayerState { 
+    Attacking,
+    Moving,
+    Idling,
+    UsingSkill
+}
+
 public class PlayerController : MonoBehaviour
 {
     private float currentHealth;
+    public PlayerState CurrentState { get; private set; }
 
     void Start()
     {
+        CurrentState = PlayerState.Idling;
         currentHealth = KaijuUpgradeManager.Instance.MaxHealth;
     }
 
@@ -18,6 +27,11 @@ public class PlayerController : MonoBehaviour
             ReceiveDamage();
         }
         InterfaceManager.Instance.UpdateKaijuHealth(currentHealth, KaijuUpgradeManager.Instance.MaxHealth);
+    }
+
+    public void ChangeState(PlayerState playerState)
+    {
+        CurrentState = playerState;
     }
 
     private void ReceiveDamage()

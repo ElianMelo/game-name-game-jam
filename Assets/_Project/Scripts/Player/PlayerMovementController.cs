@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovementController : MonoBehaviour
 {
     private Animator playerAnimator;
+    private PlayerController playerController;
     private Rigidbody playerRb;
     private float horizontalInput;
     private float verticalInput;
@@ -11,13 +12,20 @@ public class PlayerMovementController : MonoBehaviour
 
     [SerializeField] private InputActionReference move;
     [SerializeField] private Transform transformVisual;
+    [SerializeField] private float baseSmoothTime = 0.1f;
+
+    private float currentSmoothTime;
+
+    private Vector3 velocity = Vector3.zero;
 
     private const string MovingAnim = "Moving";
 
     void Start()
     {
+        currentSmoothTime = baseSmoothTime;
         playerAnimator = GetComponentInChildren<Animator>();
         playerRb = GetComponent<Rigidbody>();
+        playerController = GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -26,8 +34,7 @@ public class PlayerMovementController : MonoBehaviour
         if (GameManager.Instance.CurrentState != GameState.KaijuControl) return;
         GetInputsActions();
         SpeedControl();
-        if(moveDirection != Vector3.zero)
-            transformVisual.forward = moveDirection;
+        RotatePlayer();
     }
 
     private void FixedUpdate()
@@ -38,6 +45,11 @@ public class PlayerMovementController : MonoBehaviour
 
     private void Move()
     {
+        if (playerController.CurrentState == PlayerState.Attacking || playerController.CurrentState == PlayerState.UsingSkill)
+        {
+            playerRb.linearVelocity = Vector3.zero;
+            return;
+        }
         moveDirection = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
         moveDirection.y = 0f;
         playerRb.linearVelocity = moveDirection * KaijuUpgradeManager.Instance.Speed;
@@ -61,4 +73,11 @@ public class PlayerMovementController : MonoBehaviour
             playerRb.linearVelocity = new Vector3(limitedVel.x, playerRb.linearVelocity.y, limitedVel.z);
         }
     }
+    private void RotatePlayer()
+    {
+        float angle = Vector3.Angle(transformVisual.forward, moveDirection);
+        currentSmoothTime = angle > 130 ? baseSmoothTime * 5 : baseSmoothTime;
+        if (moveDirection != Vector3.zero)
+            transformVisual.forward = Vector3.Lerp(transformVisual.forward, moveDirection, currentSmoothTime * Time.deltaTime);
+    }        
 }

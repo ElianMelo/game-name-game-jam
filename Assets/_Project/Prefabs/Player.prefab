@@ -78,6 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   move: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   transformVisual: {fileID: 6265661002254826578}
+  baseSmoothTime: 3
 --- !u!114 &1642965576914762088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,8 +129,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.5236571
-  m_Center: {x: 0, y: 1.6026566, z: 0}
+  m_Radius: 1.2012578
+  m_Center: {x: 0.41757607, y: 1.1673297, z: 0}
 --- !u!1 &8936024221454100038
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,10 +240,41 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 01333c152c5026d4ebe5e8099b1ed424, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1986761175819952006}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 01333c152c5026d4ebe5e8099b1ed424, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3064228683210648657}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 01333c152c5026d4ebe5e8099b1ed424, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4971006649386485243}
   m_SourcePrefab: {fileID: 100100000, guid: 01333c152c5026d4ebe5e8099b1ed424, type: 3}
+--- !u!4 &2055361408468050556 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3604924455293339195, guid: 01333c152c5026d4ebe5e8099b1ed424, type: 3}
+  m_PrefabInstance: {fileID: 5872306892119202745}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4301155158378815519 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7696200768387677094, guid: 01333c152c5026d4ebe5e8099b1ed424, type: 3}
+  m_PrefabInstance: {fileID: 5872306892119202745}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5260372077484178692 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1764910268326094525, guid: 01333c152c5026d4ebe5e8099b1ed424, type: 3}
+  m_PrefabInstance: {fileID: 5872306892119202745}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5835659575334570601 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -9114496787053588016, guid: 01333c152c5026d4ebe5e8099b1ed424, type: 3}
+  m_PrefabInstance: {fileID: 5872306892119202745}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6265661002254826578 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 01333c152c5026d4ebe5e8099b1ed424, type: 3}
+  m_PrefabInstance: {fileID: 5872306892119202745}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6640636356329091720 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 961210195233335601, guid: 01333c152c5026d4ebe5e8099b1ed424, type: 3}
   m_PrefabInstance: {fileID: 5872306892119202745}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &6755339863565461224 stripped
@@ -272,3 +304,236 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3064228683210648657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6755339863565461224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9389b707478daf9439a5f83720735846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FIMSpace.FSpine.FSpineAnimator
+  SpineAnimatorAmount: 1
+  _Editor_Category: 1
+  _Editor_PivotoffsetXYZ: 0
+  ModelForwardAxis: {x: 0, y: 0, z: 1}
+  ModelForwardAxisScaled: {x: 0, y: 0, z: 1}
+  ModelUpAxis: {x: 0, y: 1, z: 0}
+  ModelUpAxisScaled: {x: 0, y: 1, z: 0}
+  DrawGizmos: 1
+  DebugGizmos: 0
+  _gizmosDrawMaxDist: 1
+  gizmosAlpha: 0.85
+  _editor_Title: Spinal Animator 2
+  _gizmosEditorStartPreview: {fileID: 5260372077484178692}
+  _gizmospesp: {fileID: 5835659575334570601}
+  _gizmosEditorEndPreview: {fileID: 2055361408468050556}
+  _gizmospeep: {fileID: 6640636356329091720}
+  SpineBones:
+  - Collide: 1
+    CollisionRadius: 1
+    ColliderOffset: {x: 0, y: 0, z: 0}
+    transform: {fileID: 5260372077484178692}
+    ProceduralPosition: {x: 0.39947, y: 1.2160378, z: -0.61}
+    ProceduralRotation: {x: -0.00000013007606, y: 0.98858905, z: -0.15063788, w: -0.00000085364826}
+    HelperDiffPosition: {x: 0, y: 0, z: 0}
+    HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
+    PreviousPosition: {x: 0, y: 0, z: 0}
+    DefaultForward: {x: 0, y: 0, z: 0}
+    StraightenFactor: 0
+    TargetStraightenFactor: 0
+    MotionWeight: 1
+    FinalRotation: {x: 0, y: 0, z: 0, w: 0}
+    FinalPosition: {x: 0, y: 0, z: 0}
+    ManualPosOffset: {x: 0, y: 0, z: 0}
+    ManualRotOffset: {x: 0, y: 0, z: 0, w: 0}
+    ReferencePosition: {x: 0, y: 0, z: 0}
+    PreviousReferencePosition: {x: 0, y: 0, z: 0}
+    ReferenceRotation: {x: 0, y: 0, z: 0, w: 0}
+    forward: {x: 0, y: 0, z: 0}
+    right: {x: 0, y: 0, z: 0}
+    up: {x: 0, y: 0, z: 0}
+  - Collide: 1
+    CollisionRadius: 1
+    ColliderOffset: {x: 0, y: 0, z: 0}
+    transform: {fileID: 6765665490883863338}
+    ProceduralPosition: {x: 0.39947042, y: 1.2914143, z: -0.36840665}
+    ProceduralRotation: {x: 0.000000019724311, y: 0.999708, z: -0.024165237, w: 0.00000081598824}
+    HelperDiffPosition: {x: 0, y: 0, z: 0}
+    HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
+    PreviousPosition: {x: 0, y: 0, z: 0}
+    DefaultForward: {x: 0, y: 0, z: 0}
+    StraightenFactor: 0
+    TargetStraightenFactor: 0
+    MotionWeight: 1
+    FinalRotation: {x: 0, y: 0, z: 0, w: 0}
+    FinalPosition: {x: 0, y: 0, z: 0}
+    ManualPosOffset: {x: 0, y: 0, z: 0}
+    ManualRotOffset: {x: 0, y: 0, z: 0, w: 0}
+    ReferencePosition: {x: 0, y: 0, z: 0}
+    PreviousReferencePosition: {x: 0, y: 0, z: 0}
+    ReferenceRotation: {x: 0, y: 0, z: 0, w: 0}
+    forward: {x: 0, y: 0, z: 0}
+    right: {x: 0, y: 0, z: 0}
+    up: {x: 0, y: 0, z: 0}
+  - Collide: 1
+    CollisionRadius: 1
+    ColliderOffset: {x: 0, y: 0, z: 0}
+    transform: {fileID: 5835659575334570601}
+    ProceduralPosition: {x: 0.39946964, y: 1.3143749, z: 0.106253386}
+    ProceduralRotation: {x: 0.00000005460162, y: 0.99809384, z: -0.06171526, w: 0.000000883048}
+    HelperDiffPosition: {x: 0, y: 0, z: 0}
+    HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
+    PreviousPosition: {x: 0, y: 0, z: 0}
+    DefaultForward: {x: 0, y: 0, z: 0}
+    StraightenFactor: 0
+    TargetStraightenFactor: 0
+    MotionWeight: 1
+    FinalRotation: {x: 0, y: 0, z: 0, w: 0}
+    FinalPosition: {x: 0, y: 0, z: 0}
+    ManualPosOffset: {x: 0, y: 0, z: 0}
+    ManualRotOffset: {x: 0, y: 0, z: 0, w: 0}
+    ReferencePosition: {x: 0, y: 0, z: 0}
+    PreviousReferencePosition: {x: 0, y: 0, z: 0}
+    ReferenceRotation: {x: 0, y: 0, z: 0, w: 0}
+    forward: {x: 0, y: 0, z: 0}
+    right: {x: 0, y: 0, z: 0}
+    up: {x: 0, y: 0, z: 0}
+  - Collide: 1
+    CollisionRadius: 1
+    ColliderOffset: {x: 0, y: 0, z: 0}
+    transform: {fileID: 4301155158378815519}
+    ProceduralPosition: {x: 0.3994688, y: 1.3729186, z: 0.577844}
+    ProceduralRotation: {x: 0.00000010589451, y: 0.9951569, z: -0.09829936, w: 0.0000010720482}
+    HelperDiffPosition: {x: 0, y: 0, z: 0}
+    HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
+    PreviousPosition: {x: 0, y: 0, z: 0}
+    DefaultForward: {x: 0, y: 0, z: 0}
+    StraightenFactor: 0
+    TargetStraightenFactor: 0
+    MotionWeight: 1
+    FinalRotation: {x: 0, y: 0, z: 0, w: 0}
+    FinalPosition: {x: 0, y: 0, z: 0}
+    ManualPosOffset: {x: 0, y: 0, z: 0}
+    ManualRotOffset: {x: 0, y: 0, z: 0, w: 0}
+    ReferencePosition: {x: 0, y: 0, z: 0}
+    PreviousReferencePosition: {x: 0, y: 0, z: 0}
+    ReferenceRotation: {x: 0, y: 0, z: 0, w: 0}
+    forward: {x: 0, y: 0, z: 0}
+    right: {x: 0, y: 0, z: 0}
+    up: {x: 0, y: 0, z: 0}
+  - Collide: 1
+    CollisionRadius: 1
+    ColliderOffset: {x: 0, y: 0, z: 0}
+    transform: {fileID: 2055361408468050556}
+    ProceduralPosition: {x: 0.39946765, y: 1.4805427, z: 1.1173074}
+    ProceduralRotation: {x: 0.00000010589451, y: 0.9951569, z: -0.09829936, w: 0.0000010720482}
+    HelperDiffPosition: {x: 0, y: 0, z: 0}
+    HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
+    PreviousPosition: {x: 0, y: 0, z: 0}
+    DefaultForward: {x: 0, y: 0, z: 0}
+    StraightenFactor: 0
+    TargetStraightenFactor: 0
+    MotionWeight: 1
+    FinalRotation: {x: 0, y: 0, z: 0, w: 0}
+    FinalPosition: {x: 0, y: 0, z: 0}
+    ManualPosOffset: {x: 0, y: 0, z: 0}
+    ManualRotOffset: {x: 0, y: 0, z: 0, w: 0}
+    ReferencePosition: {x: 0, y: 0, z: 0}
+    PreviousReferencePosition: {x: 0, y: 0, z: 0}
+    ReferenceRotation: {x: 0, y: 0, z: 0, w: 0}
+    forward: {x: 0, y: 0, z: 0}
+    right: {x: 0, y: 0, z: 0}
+    up: {x: 0, y: 0, z: 0}
+  SpineTransforms: []
+  BaseTransform: {fileID: 6265661002254826578}
+  ForwardReference: {fileID: 0}
+  LastBoneLeading: 1
+  ReverseForward: 0
+  AnimatePhysics: 0
+  AnchorRoot: {fileID: 0}
+  HeadAnchor: {fileID: 0}
+  AnimateAnchor: 1
+  LeadBoneRotationOffset: {x: 0, y: 0, z: 0}
+  LeadBoneOffsetReference: 1
+  BonesFixers: []
+  UpdateAsLast: 0
+  QueueToLastUpdate: 0
+  ManualAffectChain: 0
+  StartAfterTPose: 1
+  OptimizeWithMesh: {fileID: 0}
+  DeltaType: 4
+  UpdateRate: 0
+  UseCorrections: 0
+  MainPivotOffset: {x: 0, y: 0, z: 0}
+  PivotOffsetOnStart: 1
+  PosSmoother: 0.073
+  RotSmoother: 0.119
+  MaxStretching: 1
+  Slithery: 1
+  AngleLimit: 40
+  LimitSmoother: 0.35
+  StraightenSpeed: 7.5
+  TurboStraighten: 0
+  GoBackSpeed: 0
+  Springiness: 0
+  MotionInfluence: 1
+  MotionSpace: {fileID: 0}
+  RotationsFade: {x: 1, y: 1}
+  mainPivotOffsetTransform: {fileID: 0}
+  SegmentsPivotOffset: {x: 0, y: 0, z: 0}
+  DistancesMultiplier: 1
+  FlattenReferencePose: 0
+  GravityPower: {x: 0, y: 0, z: 0}
+  UseCollisions: 0
+  IncludedColliders: []
+  UseTruePosition: 0
+  OffsetAllColliders: {x: 0, y: 0, z: 0}
+  CollidersScale:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  CollidersScaleMul: 6.5
+  DifferenceScaleFactor: 0
+  DetailedCollision: 1
+  _CheckedPivot: 1
+--- !u!114 &4971006649386485243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6755339863565461224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde96a3d1eb10ac4e950f396a8dd062b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimatorEvents
+--- !u!4 &6765665490883863338 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 908276781140129939, guid: 01333c152c5026d4ebe5e8099b1ed424, type: 3}
+  m_PrefabInstance: {fileID: 5872306892119202745}
+  m_PrefabAsset: {fileID: 0}
