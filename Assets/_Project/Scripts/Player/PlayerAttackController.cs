@@ -79,6 +79,9 @@ public class PlayerAttackController : MonoBehaviour
             layerMask
         );
 
+        playerController.PlayerVFXController.CreateAttackSlashVFX(sphereCastOrigin.position,
+            sphereCastOrigin.forward, KaijuUpgradeManager.Instance.Range / 2);
+
         foreach (var hit in hits)
         {
             RegisterTriggerContact(hit);

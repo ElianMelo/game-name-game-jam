@@ -14,11 +14,13 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     public PlayerAttackController PlayerAttackController { get; private set; }
     public PlayerMovementController PlayerMovementController { get; private set; }
+    public PlayerVFXController PlayerVFXController { get; private set; }
 
     void Start()
     {
         PlayerAttackController = GetComponent<PlayerAttackController>();
         PlayerMovementController = GetComponent<PlayerMovementController>();
+        PlayerVFXController = GetComponent<PlayerVFXController>();
         animator = GetComponentInChildren<Animator>();
         CurrentState = PlayerState.Idling;
         currentHealth = KaijuUpgradeManager.Instance.MaxHealth;

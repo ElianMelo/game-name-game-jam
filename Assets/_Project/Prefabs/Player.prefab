@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1642965576914762088}
   - component: {fileID: 878034753190070291}
   - component: {fileID: 191638297006850537}
+  - component: {fileID: 5154967787236046290}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -130,6 +131,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.2012578
   m_Center: {x: 0.41757607, y: 1.1673297, z: 0}
+--- !u!114 &5154967787236046290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4649323731830547084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bbcbc0c54f42934781bfa58575d91c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerVFXController
+  attackSlashVFX: {fileID: 3153472991145048103, guid: 8f6f697b3f11b4d4f92066819680d362, type: 3}
 --- !u!1 &8936024221454100038
 GameObject:
   m_ObjectHideFlags: 0
