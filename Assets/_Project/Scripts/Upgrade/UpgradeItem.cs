@@ -26,6 +26,12 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private bool isUnlocked;
     private int currentPhase = 0;
 
+    void Start()
+    {
+        selfButton.onClick.AddListener(AttempBuyUpgrade);
+        background.gameObject.SetActive(false);
+        phaseText.text = $"{currentPhase} / {phases}";
+    }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -39,12 +45,6 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         TooltipSystemManager.Hide();
         if (isUnlocked) return;
-        background.gameObject.SetActive(false);
-    }
-
-    void Start()
-    {
-        selfButton.onClick.AddListener(AttempBuyUpgrade);
         background.gameObject.SetActive(false);
     }
 

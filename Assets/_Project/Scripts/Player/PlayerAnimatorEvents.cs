@@ -19,4 +19,19 @@ public class PlayerAnimatorEvents : MonoBehaviour
     {
         playerController.PlayerAttackController.PerformHitDamage();
     }
+
+    public void PerformSkillBurstHit()
+    {
+        playerController.PlayerSkillController.PerformBurstSkillHitDamage();
+    }
+
+    public void PerformSkillAreaHit()
+    {
+        playerController.PlayerSkillController.PerformAreaSkillHitDamage();
+    }
+
+    public void PerformSkillProjectileHit()
+    {
+        playerController.PlayerSkillController.PerformProjectileSkillHitDamage();
+    }
 }

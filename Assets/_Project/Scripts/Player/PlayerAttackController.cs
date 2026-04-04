@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 public class PlayerAttackController : MonoBehaviour
 {
     [SerializeField] private Transform sphereCastOrigin;
-    [SerializeField] private float attackActiveDuration;
     [SerializeField] private InputActionReference attack;
     [SerializeField] public LayerMask layerMask;
 

@@ -13,12 +13,14 @@ public class PlayerController : MonoBehaviour
     public PlayerState CurrentState { get; private set; }
     private Animator animator;
     public PlayerAttackController PlayerAttackController { get; private set; }
+    public PlayerSkillController PlayerSkillController { get; private set; }
     public PlayerMovementController PlayerMovementController { get; private set; }
     public PlayerVFXController PlayerVFXController { get; private set; }
 
     void Start()
     {
         PlayerAttackController = GetComponent<PlayerAttackController>();
+        PlayerSkillController = GetComponent<PlayerSkillController>();
         PlayerMovementController = GetComponent<PlayerMovementController>();
         PlayerVFXController = GetComponent<PlayerVFXController>();
         animator = GetComponentInChildren<Animator>();
