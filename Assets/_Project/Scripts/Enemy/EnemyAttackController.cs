@@ -20,7 +20,7 @@ public class EnemyAttackController : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(1 / TroopUpgradeManager.Instance.AttackSpeed);
+            yield return new WaitForSeconds(1 / enemyController.GetTroup().attackSpeed);
             AttemptAttack();
         }
     }
@@ -34,7 +34,7 @@ public class EnemyAttackController : MonoBehaviour
     {
          Collider[] hits = Physics.OverlapSphere(
             sphereCastOrigin.position,
-            TroopUpgradeManager.Instance.Range,
+            enemyController.GetTroup().range,
             layerMask
         );
 
@@ -47,6 +47,6 @@ public class EnemyAttackController : MonoBehaviour
     public void RegisterTriggerContact(Collider other)
     {
         PlayerController playerController = other.GetComponent<PlayerController>();
-        playerController.ReceiveDamage(TroopUpgradeManager.Instance.Damage);
+        playerController.ReceiveDamage(enemyController.GetTroup().damage);
     }
 }

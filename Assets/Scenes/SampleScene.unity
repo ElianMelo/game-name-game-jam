@@ -4580,13 +4580,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c23f63f190e2e458a80451f0cf2f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TroopUpgradeManager
-  _health: 100
-  _damage: 20
-  _speed: 10
-  _range: 2
-  _attackSpeed: 1
-  _amountOfTroop: 10
-  _amountOfGroups: 10
+  _soldier:
+    troopName: 0
+    troopType: 0
+    health: 100
+    damage: 20
+    speed: 10
+    range: 2
+    attackSpeed: 1
+    amountOfTroop: 1
+    amountOfGroups: 1
+  _rider:
+    troopName: 1
+    troopType: 0
+    health: 100
+    damage: 20
+    speed: 10
+    range: 2
+    attackSpeed: 1
+    amountOfTroop: 1
+    amountOfGroups: 1
+  _crossbow:
+    troopName: 2
+    troopType: 1
+    health: 100
+    damage: 20
+    speed: 10
+    range: 2
+    attackSpeed: 1
+    amountOfTroop: 1
+    amountOfGroups: 1
+  _catapult:
+    troopName: 3
+    troopType: 1
+    health: 100
+    damage: 20
+    speed: 10
+    range: 2
+    attackSpeed: 1
+    amountOfTroop: 1
+    amountOfGroups: 1
 --- !u!114 &6812669397543573969
 MonoBehaviour:
   m_ObjectHideFlags: 0

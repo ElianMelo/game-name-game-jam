@@ -26,7 +26,7 @@ public enum KaijuuAttibuteGroupType {
 }
 
 [Serializable]
-public class AttributesGroup
+public class KaijuuAttributesGroup
 {
     public KaijuuAttibuteGroupType groupType;
     public float damage;
@@ -40,18 +40,18 @@ public class KaijuUpgradeManager : MonoBehaviour
     [SerializeField] private float _maxHealth;
     [SerializeField] private float _healthRegen;
     [SerializeField] private float _speed;
-    [SerializeField] private AttributesGroup _attackGroup;
-    [SerializeField] private AttributesGroup _skillAOE;
-    [SerializeField] private AttributesGroup _skillBurst;
-    [SerializeField] private AttributesGroup _skillProjectile;
+    [SerializeField] private KaijuuAttributesGroup _attackGroup;
+    [SerializeField] private KaijuuAttributesGroup _skillAOE;
+    [SerializeField] private KaijuuAttributesGroup _skillBurst;
+    [SerializeField] private KaijuuAttributesGroup _skillProjectile;
 
     public float MaxHealth => _maxHealth;
     public float HealthRegen => _healthRegen;
     public float Speed => _speed;
-    public AttributesGroup AttackGroup => _attackGroup;
-    public AttributesGroup SkillAOE => _skillAOE;
-    public AttributesGroup SkillBurst => _skillBurst;
-    public AttributesGroup SkillProjectile => _skillProjectile;
+    public KaijuuAttributesGroup AttackGroup => _attackGroup;
+    public KaijuuAttributesGroup SkillAOE => _skillAOE;
+    public KaijuuAttributesGroup SkillBurst => _skillBurst;
+    public KaijuuAttributesGroup SkillProjectile => _skillProjectile;
 
     public static KaijuUpgradeManager Instance;
 

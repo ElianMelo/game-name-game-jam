@@ -1,22 +1,51 @@
+using System;
 using UnityEngine;
+
+public enum TroopName
+{
+    Soldier,
+    Rider,
+    Crossbow,
+    Catapult
+}
+
+[Serializable]
+public class TroopAttributesGroup
+{
+    public TroopName troopName;
+    public EnemyType troopType;
+    public float health;
+    public float damage;
+    public float speed;
+    public float range;
+    public float attackSpeed;
+    public float amountOfTroop;
+    public float amountOfGroups;
+}
 
 public class TroopUpgradeManager : MonoBehaviour
 {
-    [SerializeField] private float _health;
-    [SerializeField] private float _damage;
-    [SerializeField] private float _speed;
-    [SerializeField] private float _range;
-    [SerializeField] private float _attackSpeed;
-    [SerializeField] private float _amountOfTroop;
-    [SerializeField] private float _amountOfGroups;
+    [SerializeField] private TroopAttributesGroup _soldier;
+    [SerializeField] private TroopAttributesGroup _rider;
+    [SerializeField] private TroopAttributesGroup _crossbow;
+    [SerializeField] private TroopAttributesGroup _catapult;
 
-    public float Health => _health;
-    public float Damage => _damage;
-    public float Speed => _speed;
-    public float Range => _range;
-    public float AttackSpeed => _attackSpeed;
-    public float AmountOfTroop => _amountOfTroop;
-    public float AmountOfGroups => _amountOfGroups;
+    public TroopAttributesGroup Soldier => _soldier;
+    public TroopAttributesGroup Rider => _rider;
+    public TroopAttributesGroup Crossbow => _crossbow;
+    public TroopAttributesGroup Catapult => _catapult;
+
+    public TroopAttributesGroup GetTroopByName(TroopName troopName)
+    {   
+        switch (troopName)
+        {
+            case TroopName.Soldier: return Soldier;
+            case TroopName.Rider: return Rider;
+            case TroopName.Crossbow: return Crossbow;
+            case TroopName.Catapult: return Catapult;
+            default: return null;
+        }
+    }
 
     public static TroopUpgradeManager Instance;
 
@@ -25,18 +54,61 @@ public class TroopUpgradeManager : MonoBehaviour
         Instance = this;
     }
 
-    public void BuyUpgrade(UpgradeType upgradeType, float amount)
+    public void BuyUpgrade(UpgradeType upgradeType, TroopName troopName, float amount)
     {
-        switch (upgradeType)
+        switch (troopName)
         {
-            case UpgradeType.Damage: _damage += amount; return;
-            case UpgradeType.Range: _range += amount; return;
-            case UpgradeType.Speed: _speed += amount; return;
-            case UpgradeType.AttackSpeed: _attackSpeed += amount; return;
-            case UpgradeType.Health: _health += amount; return;
-            case UpgradeType.AmountTroop: _amountOfTroop += amount; return;
-            case UpgradeType.AmountGroup: _amountOfGroups += amount; return;
-            default: return;
+            case TroopName.Soldier:
+                switch (upgradeType)
+                {
+                    case UpgradeType.Damage: _soldier.damage += amount; return;
+                    case UpgradeType.Range: _soldier.range += amount; return;
+                    case UpgradeType.Speed: _soldier.speed += amount; return;
+                    case UpgradeType.AttackSpeed: _soldier.attackSpeed += amount; return;
+                    case UpgradeType.Health: _soldier.health += amount; return;
+                    case UpgradeType.AmountTroop: _soldier.amountOfTroop += amount; return;
+                    case UpgradeType.AmountGroup: _soldier.amountOfGroups += amount; return;
+                    default: return;
+                }
+            case TroopName.Rider:
+                switch (upgradeType)
+                {
+                    case UpgradeType.Damage: _rider.damage += amount; return;
+                    case UpgradeType.Range: _rider.range += amount; return;
+                    case UpgradeType.Speed: _rider.speed += amount; return;
+                    case UpgradeType.AttackSpeed: _rider.attackSpeed += amount; return;
+                    case UpgradeType.Health: _rider.health += amount; return;
+                    case UpgradeType.AmountTroop: _rider.amountOfTroop += amount; return;
+                    case UpgradeType.AmountGroup: _rider.amountOfGroups += amount; return;
+                    default: return;
+                }
+            case TroopName.Crossbow:
+                switch (upgradeType)
+                {
+                    case UpgradeType.Damage: _crossbow.damage += amount; return;
+                    case UpgradeType.Range: _crossbow.range += amount; return;
+                    case UpgradeType.Speed: _crossbow.speed += amount; return;
+                    case UpgradeType.AttackSpeed: _crossbow.attackSpeed += amount; return;
+                    case UpgradeType.Health: _crossbow.health += amount; return;
+                    case UpgradeType.AmountTroop: _crossbow.amountOfTroop += amount; return;
+                    case UpgradeType.AmountGroup: _crossbow.amountOfGroups += amount; return;
+                    default: return;
+                }
+            case TroopName.Catapult:
+                switch (upgradeType)
+                {
+                    case UpgradeType.Damage: _catapult.damage += amount; return;
+                    case UpgradeType.Range: _catapult.range += amount; return;
+                    case UpgradeType.Speed: _catapult.speed += amount; return;
+                    case UpgradeType.AttackSpeed: _catapult.attackSpeed += amount; return;
+                    case UpgradeType.Health: _catapult.health += amount; return;
+                    case UpgradeType.AmountTroop: _catapult.amountOfTroop += amount; return;
+                    case UpgradeType.AmountGroup: _catapult.amountOfGroups += amount; return;
+                    default: return;
+                }
+            default: break;
         }
+
+        
     }
 }

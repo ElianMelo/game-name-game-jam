@@ -63,7 +63,7 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         switch (upgradeClass)
         {
             case UpgradeClass.Kaijuu: KaijuUpgradeManager.Instance.BuyUpgrade(upgradeType, KaijuuAttibuteGroupType.Attack, amountValue); return;
-            case UpgradeClass.Troop: TroopUpgradeManager.Instance.BuyUpgrade(upgradeType, amountValue); return;
+            case UpgradeClass.Troop: TroopUpgradeManager.Instance.BuyUpgrade(upgradeType, TroopName.Soldier, amountValue); return;
         }
     }
 

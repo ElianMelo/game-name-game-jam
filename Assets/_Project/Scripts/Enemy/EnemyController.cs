@@ -17,6 +17,7 @@ public class EnemyController : MonoBehaviour
 {
     public float health;
     public EnemyType enemyType;
+    public TroopName troopName;
     private HealthBar healthBar;
     private Animator animator;
 
@@ -43,6 +44,11 @@ public class EnemyController : MonoBehaviour
     private void OnDestroy()
     {
         GameManager.OnGameStateChanged -= OnGameStateChanged;
+    }
+
+    public TroopAttributesGroup GetTroup()
+    {
+        return TroopUpgradeManager.Instance.GetTroopByName(troopName);
     }
 
     private void OnGameStateChanged(GameState gamestate)
