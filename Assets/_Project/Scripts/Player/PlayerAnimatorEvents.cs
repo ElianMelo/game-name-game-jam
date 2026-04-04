@@ -11,6 +11,12 @@ public class PlayerAnimatorEvents : MonoBehaviour
 
     public void FinishAttackState()
     {
+        playerController.ResetAnimator();
         playerController.ChangeState(PlayerState.Idling);
+    }
+
+    public void PerformAttackHit()
+    {
+        playerController.PlayerAttackController.PerformHitDamage();
     }
 }

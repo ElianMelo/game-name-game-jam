@@ -1,3 +1,4 @@
+using FIMSpace.Basics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,9 +13,15 @@ public class PlayerController : MonoBehaviour
 {
     private float currentHealth;
     public PlayerState CurrentState { get; private set; }
+    private Animator animator;
+    public PlayerAttackController PlayerAttackController { get; private set; }
+    public PlayerMovementController PlayerMovementController { get; private set; }
 
     void Start()
     {
+        PlayerAttackController = GetComponent<PlayerAttackController>();
+        PlayerMovementController = GetComponent<PlayerMovementController>();
+        animator = GetComponentInChildren<Animator>();
         CurrentState = PlayerState.Idling;
         currentHealth = KaijuUpgradeManager.Instance.MaxHealth;
     }
@@ -27,6 +34,11 @@ public class PlayerController : MonoBehaviour
             ReceiveDamage();
         }
         InterfaceManager.Instance.UpdateKaijuHealth(currentHealth, KaijuUpgradeManager.Instance.MaxHealth);
+    }
+
+    public void ResetAnimator()
+    {
+        animator.speed = 1f;
     }
 
     public void ChangeState(PlayerState playerState)

@@ -1,3 +1,4 @@
+using FIMSpace.Basics;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,14 +9,12 @@ public class PlayerAttackController : MonoBehaviour
     [SerializeField] private float attackActiveDuration;
     [SerializeField] private InputActionReference attack;
     [SerializeField] public LayerMask layerMask;
-    [SerializeField] public float windupSeconds;
 
     private Animator animator;
     private PlayerController playerController;
     private float currentAttackCooldown;
     private bool canAttack = false;
     private bool isAttackLeft = true;
-    private Coroutine delayedHitCoroutine;
 
     private const string AttackLeftAnim = "AttackLeft";
     private const string AttackRightAnim = "AttackRight";
@@ -50,7 +49,7 @@ public class PlayerAttackController : MonoBehaviour
         currentAttackCooldown -= Time.deltaTime;
         if(currentAttackCooldown <= 0)
         {
-            currentAttackCooldown = KaijuUpgradeManager.Instance.AttackSpeed;
+            currentAttackCooldown = 1 / KaijuUpgradeManager.Instance.AttackSpeed;
             canAttack = true;
         }
     }
@@ -68,16 +67,12 @@ public class PlayerAttackController : MonoBehaviour
         canAttack = false;
         isAttackLeft = !isAttackLeft;
         animator.SetTrigger(isAttackLeft ? AttackLeftAnim : AttackRightAnim);
+        animator.speed = KaijuUpgradeManager.Instance.AttackSpeed;
         playerController.ChangeState(PlayerState.Attacking);
-
-        if (delayedHitCoroutine != null) StopCoroutine(delayedHitCoroutine);
-        delayedHitCoroutine = StartCoroutine(DelayedHit());
     }
 
-    private IEnumerator DelayedHit()
+    public void PerformHitDamage()
     {
-        yield return new WaitForSeconds(windupSeconds);
-
         Collider[] hits = Physics.OverlapSphere(
             sphereCastOrigin.position,
             KaijuUpgradeManager.Instance.Range,
