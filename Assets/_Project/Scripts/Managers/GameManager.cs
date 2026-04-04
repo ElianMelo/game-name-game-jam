@@ -73,5 +73,6 @@ public class GameManager : MonoBehaviour
     {
         currentState = newState;
         OnGameStateChanged?.Invoke(currentState);
+        TooltipSystemManager.Hide();
     }
 }

@@ -27,17 +27,17 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        TooltipSystemManager.Show($"{upgradeType.ToString()} \n Amount: {amountValue} \n Cost: {upgradeCost}");
         if (isUnlocked) return;
         background.color = hoverColor;
         background.gameObject.SetActive(true);
-        TooltipSystemManager.Show($"{upgradeType.ToString()} \n Amount: {amountValue} \n Cost: {upgradeCost}");
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        TooltipSystemManager.Hide();
         if (isUnlocked) return;
         background.gameObject.SetActive(false);
-        TooltipSystemManager.Hide();
     }
 
     void Start()
