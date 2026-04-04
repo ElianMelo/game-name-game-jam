@@ -1,6 +1,4 @@
-using FIMSpace.Basics;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public enum PlayerState { 
     Attacking,
@@ -29,10 +27,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (GameManager.Instance.CurrentState != GameState.KaijuControl) return;
-        if (Keyboard.current.tKey.wasPressedThisFrame)
-        {
-            ReceiveDamage();
-        }
         InterfaceManager.Instance.UpdateKaijuHealth(currentHealth, KaijuUpgradeManager.Instance.MaxHealth);
     }
 
@@ -46,8 +40,8 @@ public class PlayerController : MonoBehaviour
         CurrentState = playerState;
     }
 
-    private void ReceiveDamage()
+    public void ReceiveDamage(float amount)
     {
-        currentHealth -= 10f;
+        currentHealth -= amount;
     }
 }

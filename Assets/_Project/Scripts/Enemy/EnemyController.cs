@@ -1,3 +1,4 @@
+using FIMSpace.Basics;
 using UnityEngine;
 
 public enum EnemyType
@@ -6,11 +7,23 @@ public enum EnemyType
     Stationary
 }
 
+public enum EnemyState
+{
+    Attacking,
+    Moving,
+}
+
 public class EnemyController : MonoBehaviour
 {
     public float health;
     public EnemyType enemyType;
     private HealthBar healthBar;
+    private Animator animator;
+
+    public EnemyMovementController EnemyMovementController { get; private set; }
+    public EnemyAttackController EnemyAttackController { get; private set; }
+    public PlayerController PlayerController { get; private set; }
+    public EnemyState CurrentState { get; private set; }
 
     private float currentHealth;
     private bool isDead = false;
@@ -18,7 +31,11 @@ public class EnemyController : MonoBehaviour
     private void Start()
     {
         currentHealth = health;
+        animator = GetComponentInChildren<Animator>();
+        EnemyMovementController = GetComponent<EnemyMovementController>();
+        EnemyAttackController = GetComponent<EnemyAttackController>();
         healthBar = GetComponentInChildren<HealthBar>();
+        PlayerController = FindFirstObjectByType<PlayerController>();
         healthBar.UpdateHealth(currentHealth, health);
         GameManager.OnGameStateChanged += OnGameStateChanged;
     }
@@ -31,6 +48,16 @@ public class EnemyController : MonoBehaviour
     private void OnGameStateChanged(GameState gamestate)
     {
         if (gamestate == GameState.Upgrade) Death();
+    }
+
+    public void ResetAnimator()
+    {
+        animator.speed = 1f;
+    }
+
+    public void ChangeState(EnemyState playerState)
+    {
+        CurrentState = playerState;
     }
 
     public void ReceiveDamage(float amount)
