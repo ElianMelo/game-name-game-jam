@@ -4527,11 +4527,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KaijuUpgradeManager
   _maxHealth: 100
   _healthRegen: 100
-  _damage: 20
-  _range: 2
   _speed: 10
-  _attackSpeed: 1
-  _skillCooldown: 100
+  _attackGroup:
+    groupType: 0
+    damage: 20
+    range: 2
+    attackSpeed: 1
+    skillCooldown: 1
+  _skillAOE:
+    groupType: 1
+    damage: 20
+    range: 2
+    attackSpeed: 1
+    skillCooldown: 1
+  _skillBurst:
+    groupType: 2
+    damage: 20
+    range: 2
+    attackSpeed: 1
+    skillCooldown: 1
+  _skillProjectile:
+    groupType: 3
+    damage: 20
+    range: 2
+    attackSpeed: 1
+    skillCooldown: 1
 --- !u!4 &6704276195125163336
 Transform:
   m_ObjectHideFlags: 0

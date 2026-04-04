@@ -1,5 +1,3 @@
-using FIMSpace.Basics;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -49,7 +47,7 @@ public class PlayerAttackController : MonoBehaviour
         currentAttackCooldown -= Time.deltaTime;
         if(currentAttackCooldown <= 0)
         {
-            currentAttackCooldown = 1 / KaijuUpgradeManager.Instance.AttackSpeed;
+            currentAttackCooldown = 1 / KaijuUpgradeManager.Instance.AttackGroup.attackSpeed;
             canAttack = true;
         }
     }
@@ -58,7 +56,7 @@ public class PlayerAttackController : MonoBehaviour
     {
         if (KaijuUpgradeManager.Instance == null) return;
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(sphereCastOrigin.position, KaijuUpgradeManager.Instance.Range);
+        Gizmos.DrawWireSphere(sphereCastOrigin.position, KaijuUpgradeManager.Instance.AttackGroup.range);
     }
 
     private void AttemptAttack(InputAction.CallbackContext context)
@@ -67,7 +65,7 @@ public class PlayerAttackController : MonoBehaviour
         canAttack = false;
         isAttackLeft = !isAttackLeft;
         animator.SetTrigger(isAttackLeft ? AttackLeftAnim : AttackRightAnim);
-        animator.speed = KaijuUpgradeManager.Instance.AttackSpeed;
+        animator.speed = KaijuUpgradeManager.Instance.AttackGroup.attackSpeed;
         playerController.ChangeState(PlayerState.Attacking);
     }
 
@@ -75,12 +73,12 @@ public class PlayerAttackController : MonoBehaviour
     {
         Collider[] hits = Physics.OverlapSphere(
             sphereCastOrigin.position,
-            KaijuUpgradeManager.Instance.Range,
+            KaijuUpgradeManager.Instance.AttackGroup.range,
             layerMask
         );
 
         playerController.PlayerVFXController.CreateAttackSlashVFX(sphereCastOrigin.position,
-            sphereCastOrigin.forward, KaijuUpgradeManager.Instance.Range / 2);
+            sphereCastOrigin.forward, KaijuUpgradeManager.Instance.AttackGroup.range / 2);
 
         foreach (var hit in hits)
         {
@@ -91,6 +89,6 @@ public class PlayerAttackController : MonoBehaviour
     public void RegisterTriggerContact(Collider other)
     {
         EnemyController enemyController = other.GetComponent<EnemyController>();
-        enemyController.ReceiveDamage(KaijuUpgradeManager.Instance.Damage);
+        enemyController.ReceiveDamage(KaijuUpgradeManager.Instance.AttackGroup.damage);
     }
 }
