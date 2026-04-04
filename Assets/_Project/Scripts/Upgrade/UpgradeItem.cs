@@ -18,6 +18,8 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     [Header("Upgrade Info")]
     public UpgradeClass upgradeClass;
     public UpgradeType upgradeType;
+    public KaijuuAttibuteGroupType kaijuuAttributeGroup;
+    public TroopName troopName;
     public float amountValue;
     public int upgradeCost;
 
@@ -62,8 +64,8 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         switch (upgradeClass)
         {
-            case UpgradeClass.Kaijuu: KaijuUpgradeManager.Instance.BuyUpgrade(upgradeType, KaijuuAttibuteGroupType.Attack, amountValue); return;
-            case UpgradeClass.Troop: TroopUpgradeManager.Instance.BuyUpgrade(upgradeType, TroopName.Soldier, amountValue); return;
+            case UpgradeClass.Kaijuu: KaijuUpgradeManager.Instance.BuyUpgrade(upgradeType, kaijuuAttributeGroup, amountValue); return;
+            case UpgradeClass.Troop: TroopUpgradeManager.Instance.BuyUpgrade(upgradeType, troopName, amountValue); return;
         }
     }
 

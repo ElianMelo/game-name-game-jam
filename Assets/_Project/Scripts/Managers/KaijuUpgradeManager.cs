@@ -10,7 +10,8 @@ public enum UpgradeType
     Cooldown,
     Health,
     AmountTroop,
-    AmountGroup
+    AmountGroup,
+    Unlock
 }
 
 public enum UpgradeClass { 
