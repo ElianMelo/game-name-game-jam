@@ -50,7 +50,7 @@ public class KaijuUpgradeManager : MonoBehaviour
     public float HealthRegen => _healthRegen;
     public float Speed => _speed;
     public KaijuuAttributesGroup AttackGroup => _attackGroup;
-    public KaijuuAttributesGroup SkillAOE => _skillAOE;
+    public KaijuuAttributesGroup SkillArea => _skillAOE;
     public KaijuuAttributesGroup SkillBurst => _skillBurst;
     public KaijuuAttributesGroup SkillProjectile => _skillProjectile;
 
