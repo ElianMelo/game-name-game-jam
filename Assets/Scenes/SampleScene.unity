@@ -262,7 +262,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1578391550}
+    m_TransformParent: {fileID: 540719146}
     m_Modifications:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: kaijuuAttributeGroup
@@ -271,6 +271,10 @@ PrefabInstance:
     - target: {fileID: 3475134634242153700, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: m_Name
       value: UpgradeItemDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 3475134634242153700, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9079821349419070118, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: m_Pivot.x
@@ -529,9 +533,7 @@ RectTransform:
   m_Children:
   - {fileID: 1588081176}
   - {fileID: 1336148320}
-  - {fileID: 1336586436}
-  - {fileID: 782778048}
-  - {fileID: 684600802}
+  - {fileID: 1000528229}
   m_Father: {fileID: 1481241977}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -545,7 +547,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1578391550}
+    m_TransformParent: {fileID: 540719146}
     m_Modifications:
     - target: {fileID: 49237921529089757, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: m_Sprite
@@ -566,6 +568,10 @@ PrefabInstance:
     - target: {fileID: 3475134634242153700, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: m_Name
       value: UpgradeItemRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3475134634242153700, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9079821349419070118, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: m_Pivot.x
@@ -1139,7 +1145,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1261945736}
+    m_TransformParent: {fileID: 1640311993}
     m_Modifications:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: kaijuuAttributeGroup
@@ -2306,13 +2312,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 518220487}
   m_CullTransparentMesh: 1
+--- !u!1 &540719145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 540719146}
+  m_Layer: 5
+  m_Name: UnlockAreaTree
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &540719146
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540719145}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 38254590}
+  - {fileID: 572594811}
+  - {fileID: 175307012}
+  m_Father: {fileID: 1578391550}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &572594810
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1578391550}
+    m_TransformParent: {fileID: 540719146}
     m_Modifications:
     - target: {fileID: 49237921529089757, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: m_Sprite
@@ -3017,7 +3061,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 131120391}
+    m_TransformParent: {fileID: 1000528229}
     m_Modifications:
     - target: {fileID: 49237921529089757, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: m_Sprite
@@ -3337,7 +3381,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 131120391}
+    m_TransformParent: {fileID: 1000528229}
     m_Modifications:
     - target: {fileID: 49237921529089757, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: m_Sprite
@@ -3694,13 +3738,16 @@ MonoBehaviour:
   visuals: {fileID: 586748682}
   kaijuuTreeControl: {fileID: 1261042156}
   troopsTreeControl: {fileID: 661284150}
+  unlockBurstTree: {fileID: 1640311992}
+  unlockAreaTree: {fileID: 540719145}
+  unlockProjectileTree: {fileID: 1000528228}
 --- !u!1001 &958040868
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1261945736}
+    m_TransformParent: {fileID: 1640311993}
     m_Modifications:
     - target: {fileID: 49237921529089757, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: m_Sprite
@@ -3900,6 +3947,44 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 4
   m_TargetDisplay: 0
+--- !u!1 &1000528228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1000528229}
+  m_Layer: 5
+  m_Name: UnlockProjectileTree
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1000528229
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000528228}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1336586436}
+  - {fileID: 782778048}
+  - {fileID: 684600802}
+  m_Father: {fileID: 131120391}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1048225384
 GameObject:
   m_ObjectHideFlags: 0
@@ -4689,9 +4774,7 @@ RectTransform:
   m_Children:
   - {fileID: 518220488}
   - {fileID: 1968786519}
-  - {fileID: 362287928}
-  - {fileID: 958040869}
-  - {fileID: 1266732866}
+  - {fileID: 1640311993}
   m_Father: {fileID: 1481241977}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4705,7 +4788,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1261945736}
+    m_TransformParent: {fileID: 1640311993}
     m_Modifications:
     - target: {fileID: 49237921529089757, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: m_Sprite
@@ -5298,7 +5381,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 131120391}
+    m_TransformParent: {fileID: 1000528229}
     m_Modifications:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: kaijuuAttributeGroup
@@ -5758,9 +5841,7 @@ RectTransform:
   m_Children:
   - {fileID: 1127416954}
   - {fileID: 582367208}
-  - {fileID: 38254590}
-  - {fileID: 572594811}
-  - {fileID: 175307012}
+  - {fileID: 540719146}
   m_Father: {fileID: 1481241977}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -5936,6 +6017,44 @@ Transform:
   m_Children: []
   m_Father: {fileID: 693415084}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1640311992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1640311993}
+  m_Layer: 5
+  m_Name: UnlockBurstTree
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1640311993
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640311992}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 362287928}
+  - {fileID: 958040869}
+  - {fileID: 1266732866}
+  m_Father: {fileID: 1261945736}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1652587808
 GameObject:
   m_ObjectHideFlags: 0

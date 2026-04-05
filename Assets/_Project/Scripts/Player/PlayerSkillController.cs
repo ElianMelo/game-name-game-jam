@@ -62,6 +62,8 @@ public class PlayerSkillController : MonoBehaviour
 
     private void AttemptSkillBurst(InputAction.CallbackContext context)
     {
+        if (GameManager.Instance.currentState != GameState.KaijuControl) return;
+        if (!KaijuUpgradeManager.Instance.SkillBurst.unlocked) return;
         if (!canUseSkillBurst) return;
         canUseSkillBurst = false;
         animator.SetTrigger(SkillBurstAnim);
@@ -77,6 +79,8 @@ public class PlayerSkillController : MonoBehaviour
 
     private void AttemptSkillArea(InputAction.CallbackContext context)
     {
+        if (GameManager.Instance.currentState != GameState.KaijuControl) return;
+        if (!KaijuUpgradeManager.Instance.SkillArea.unlocked) return;
         if (!canUseSkillArea) return;
         canUseSkillArea = false;
         animator.SetTrigger(SkillAreaAnim);
@@ -93,6 +97,8 @@ public class PlayerSkillController : MonoBehaviour
 
     private void AttemptSkillProjectile(InputAction.CallbackContext context)
     {
+        if (GameManager.Instance.currentState != GameState.KaijuControl) return;
+        if (!KaijuUpgradeManager.Instance.SkillProjectile.unlocked) return;
         if (!canUseSkillProjectile) return;
         canUseSkillProjectile = false;
         animator.SetTrigger(SkillProjectileAnim);

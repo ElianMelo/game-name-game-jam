@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,12 @@ public class UpgradeTreeSwitcher : MonoBehaviour
     public UpgradeTreeController kaijuuTreeControl;
     public UpgradeTreeController troopsTreeControl;
 
+    public GameObject unlockBurstTree;
+    public GameObject unlockAreaTree;
+    public GameObject unlockProjectileTree;
+
+    public static Action<KaijuuAttibuteGroupType> UnlockKaijuuSkillTreePath { get; set; }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,14 +25,26 @@ public class UpgradeTreeSwitcher : MonoBehaviour
         kaijuuTreeButton.onClick.AddListener(SwitchKaijuuTree);
         troopsTreeButton.onClick.AddListener(SwitchTroopsTree);
         GameManager.OnGameStateChanged = OnGameStateChanged;
+        UnlockKaijuuSkillTreePath += OnUnlockKaijuuSkillTreePath;
     }
     private void OnDestroy()
     {
         playGameButton.onClick.RemoveAllListeners();
         kaijuuTreeButton.onClick.RemoveAllListeners();
         troopsTreeButton.onClick.RemoveAllListeners();
+        UnlockKaijuuSkillTreePath -= OnUnlockKaijuuSkillTreePath;
     }
-        
+
+    private void OnUnlockKaijuuSkillTreePath(KaijuuAttibuteGroupType groupType)
+    {
+        switch (groupType)
+        {
+            case KaijuuAttibuteGroupType.SkillAOE: UnlockAreaTree(); return;
+            case KaijuuAttibuteGroupType.SkillBurst: UnlockBurstTree(); return;
+            case KaijuuAttibuteGroupType.SkillProjectiles: UnlockProjectileTree(); return;
+        }
+    }
+
     private void OnGameStateChanged(GameState gameState)
     {
         if (gameState == GameState.KaijuControl) HideVisuals();
@@ -57,5 +76,18 @@ public class UpgradeTreeSwitcher : MonoBehaviour
     {
         troopsTreeControl.ShowVisuals();
         kaijuuTreeControl.HideVisuals();
+    }
+
+    private void UnlockBurstTree()
+    {
+        unlockBurstTree.SetActive(true);
+    }
+    private void UnlockAreaTree()
+    {
+        unlockAreaTree.SetActive(true);
+    }
+    private void UnlockProjectileTree()
+    {
+        unlockProjectileTree.SetActive(true);
     }
 }

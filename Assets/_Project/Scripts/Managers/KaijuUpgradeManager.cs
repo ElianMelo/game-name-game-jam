@@ -30,6 +30,7 @@ public enum KaijuuAttibuteGroupType {
 public class KaijuuAttributesGroup
 {
     public KaijuuAttibuteGroupType groupType;
+    public bool unlocked = false;
     public float damage;
     public float range;
     public float attackSpeed;
@@ -63,6 +64,16 @@ public class KaijuUpgradeManager : MonoBehaviour
 
     public void BuyUpgrade(UpgradeType upgradeType, KaijuuAttibuteGroupType groupType, float amount)
     {
+        if(upgradeType == UpgradeType.Unlock)
+        {
+            switch (groupType)
+            {
+                case KaijuuAttibuteGroupType.SkillAOE: _skillAOE.unlocked = true; break;
+                case KaijuuAttibuteGroupType.SkillBurst: _skillBurst.unlocked = true; break;
+                case KaijuuAttibuteGroupType.SkillProjectiles: _skillProjectile.unlocked = true; break;
+            }
+            UpgradeTreeSwitcher.UnlockKaijuuSkillTreePath?.Invoke(groupType);
+        }
         switch (groupType)
         {
             case KaijuuAttibuteGroupType.Attack:
