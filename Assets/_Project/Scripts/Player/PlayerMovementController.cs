@@ -31,7 +31,11 @@ public class PlayerMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.Instance.CurrentState != GameState.KaijuControl) return;
+        if (GameManager.Instance.CurrentState != GameState.KaijuControl)
+        {
+            playerAnimator.SetBool(MovingAnim, false);
+            return;
+        }
         GetInputsActions();
         SpeedControl();
         RotatePlayer();
