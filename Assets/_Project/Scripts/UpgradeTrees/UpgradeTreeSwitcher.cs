@@ -12,11 +12,17 @@ public class UpgradeTreeSwitcher : MonoBehaviour
     public UpgradeTreeController kaijuuTreeControl;
     public UpgradeTreeController troopsTreeControl;
 
+    [Header("Kaijuu Unlock")]
     public GameObject unlockBurstTree;
     public GameObject unlockAreaTree;
     public GameObject unlockProjectileTree;
+    [Header("Troop Unlock")]
+    public GameObject unlockRiderTree;
+    public GameObject unlockCrossbowTree;
+    public GameObject unlockCatapultTree;
 
     public static Action<KaijuuAttibuteGroupType> UnlockKaijuuSkillTreePath { get; set; }
+    public static Action<TroopName> UnlockTroopTreePath { get; set; }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +32,7 @@ public class UpgradeTreeSwitcher : MonoBehaviour
         troopsTreeButton.onClick.AddListener(SwitchTroopsTree);
         GameManager.OnGameStateChanged = OnGameStateChanged;
         UnlockKaijuuSkillTreePath += OnUnlockKaijuuSkillTreePath;
+        UnlockTroopTreePath += OnUnlockTroopTreePath;
     }
     private void OnDestroy()
     {
@@ -33,6 +40,7 @@ public class UpgradeTreeSwitcher : MonoBehaviour
         kaijuuTreeButton.onClick.RemoveAllListeners();
         troopsTreeButton.onClick.RemoveAllListeners();
         UnlockKaijuuSkillTreePath -= OnUnlockKaijuuSkillTreePath;
+        UnlockTroopTreePath -= OnUnlockTroopTreePath;
     }
 
     private void OnUnlockKaijuuSkillTreePath(KaijuuAttibuteGroupType groupType)
@@ -42,6 +50,16 @@ public class UpgradeTreeSwitcher : MonoBehaviour
             case KaijuuAttibuteGroupType.SkillAOE: UnlockAreaTree(); return;
             case KaijuuAttibuteGroupType.SkillBurst: UnlockBurstTree(); return;
             case KaijuuAttibuteGroupType.SkillProjectiles: UnlockProjectileTree(); return;
+        }
+    }
+
+    private void OnUnlockTroopTreePath(TroopName troopName)
+    {
+        switch (troopName)  
+        {
+            case TroopName.Rider: UnlockRiderTree(); return;
+            case TroopName.Crossbow: UnlockCrossbowTree(); return;
+            case TroopName.Catapult: UnlockCatapultTree(); return;
         }
     }
 
@@ -89,5 +107,17 @@ public class UpgradeTreeSwitcher : MonoBehaviour
     private void UnlockProjectileTree()
     {
         unlockProjectileTree.SetActive(true);
+    }
+    private void UnlockRiderTree()
+    {
+        unlockRiderTree.SetActive(true);
+    }
+    private void UnlockCrossbowTree()
+    {
+        unlockCrossbowTree.SetActive(true);
+    }
+    private void UnlockCatapultTree()
+    {
+        unlockCatapultTree.SetActive(true);
     }
 }

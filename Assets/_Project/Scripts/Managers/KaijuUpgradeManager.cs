@@ -9,8 +9,8 @@ public enum UpgradeType
     AttackSpeed,
     Cooldown,
     Health,
-    AmountTroop,
-    AmountGroup,
+    SpawnAmount,
+    SpawnSpeed,
     Unlock
 }
 

@@ -1,31 +1,49 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyPrefab;
-    [SerializeField] private float spawnTime;
+    [SerializeField] private GameObject soldierPrefab;
     [SerializeField] private List<Transform> spawnPoints = new();
 
     private float currentSpawnTime = 0;
 
     private void Start()
     {
-        currentSpawnTime = spawnTime;
+        currentSpawnTime = 1 / TroopUpgradeManager.Instance.Soldier.spawnSpeed;
     }
 
     void Update()
     {
-        SpawnUnit();
+        SpawnUnit(TroopName.Soldier);
+        SpawnUnit(TroopName.Rider);
+        SpawnUnit(TroopName.Crossbow);
+        SpawnUnit(TroopName.Catapult);
     }
 
-    private void SpawnUnit()
+    private void SpawnUnit(TroopName troopName)
     {
         if (GameManager.Instance.CurrentState != GameState.KaijuControl) return;
+        TroopAttributesGroup currentGroup = GetUnitBasedOnName(troopName);
+        if (currentGroup.unlocked == false) return;
         currentSpawnTime -= Time.deltaTime;
         if (currentSpawnTime > 0) return;
-        currentSpawnTime = spawnTime;
-        GameObject enemyObj = Instantiate(enemyPrefab, spawnPoints[Random.Range(0, spawnPoints.Count)].position, Quaternion.identity);
+        currentSpawnTime = 1 / currentGroup.spawnSpeed;
+        for (int i = 0; i < currentGroup.spawnAmount; i++)
+        {
+            GameObject enemyObj = Instantiate(soldierPrefab, spawnPoints[Random.Range(0, spawnPoints.Count)].position, Quaternion.identity);
+        }
+    }
+
+    private TroopAttributesGroup GetUnitBasedOnName(TroopName troopName)
+    {
+        switch (troopName)
+        {
+            case TroopName.Soldier: return TroopUpgradeManager.Instance.Soldier;
+            case TroopName.Rider: return TroopUpgradeManager.Instance.Rider;
+            case TroopName.Crossbow: return TroopUpgradeManager.Instance.Crossbow;
+            case TroopName.Catapult: return TroopUpgradeManager.Instance.Catapult;
+        }
+        return null;
     }
 }
