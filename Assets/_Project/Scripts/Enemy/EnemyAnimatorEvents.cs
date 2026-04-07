@@ -19,4 +19,9 @@ public class EnemyAnimatorEvents : MonoBehaviour
     {
         enemyController.EnemyAttackController.PerformHitDamage();
     }
+
+    public void PerformProjectileLaunch()
+    {
+        enemyController.EnemyAttackController.PerformProjectileLaunch();
+    }
 }

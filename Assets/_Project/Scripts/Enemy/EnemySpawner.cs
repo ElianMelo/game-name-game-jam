@@ -34,8 +34,20 @@ public class EnemySpawner : MonoBehaviour
         currentSpawnTime = 1 / currentGroup.spawnSpeed;
         for (int i = 0; i < currentGroup.spawnAmount; i++)
         {
-            GameObject enemyObj = Instantiate(soldierPrefab, spawnPoints[Random.Range(0, spawnPoints.Count)].position, Quaternion.identity);
+            GameObject enemyObj = Instantiate(GetPrefabBasedOnName(troopName), spawnPoints[Random.Range(0, spawnPoints.Count)].position, Quaternion.identity);
         }
+    }
+
+    private GameObject GetPrefabBasedOnName(TroopName troopName)
+    {
+        switch (troopName)
+        {
+            case TroopName.Soldier: return soldierPrefab;
+            case TroopName.Rider: return soldierPrefab;
+            case TroopName.Crossbow: return crossbowPrefab;
+            case TroopName.Catapult: return crossbowPrefab;
+        }
+        return null;
     }
 
     private TroopAttributesGroup GetUnitBasedOnName(TroopName troopName)

@@ -6,6 +6,7 @@ public class EnemyAttackController : MonoBehaviour
     public float attackSpeed;
     public Transform sphereCastOrigin;
     public LayerMask layerMask;
+    public GameObject projectilePrefab;
 
     private EnemyController enemyController;
     private Coroutine checkAttackCoroutine;
@@ -31,7 +32,7 @@ public class EnemyAttackController : MonoBehaviour
 
     private void AttemptAttack()
     {
-        if (Vector3.Distance(transform.position, enemyController.PlayerController.transform.position) > 3f) return;
+        if (Vector3.Distance(transform.position, enemyController.PlayerController.transform.position) > 4f) return;
         animator.SetTrigger(AttackAnim);
         animator.speed = enemyController.GetTroup().attackSpeed;
         enemyController.ChangeState(EnemyState.Attacking);
@@ -49,6 +50,14 @@ public class EnemyAttackController : MonoBehaviour
         {
             RegisterTriggerContact(hit);
         }
+    }
+
+    public void PerformProjectileLaunch()
+    {
+        var direction = enemyController.PlayerController.transform.position - transform.position;
+        var projectile = Instantiate(projectilePrefab, sphereCastOrigin.position, Quaternion.LookRotation(direction));
+        var enemyProjectile = projectile.GetComponent<EnemyProjectile>();
+        enemyProjectile.SetupDirection(direction);
     }
 
     public void RegisterTriggerContact(Collider other)
