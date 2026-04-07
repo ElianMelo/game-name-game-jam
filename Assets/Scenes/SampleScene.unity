@@ -132,6 +132,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 9239b3dd110ece6438c3b68902ce7b6e, type: 3}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
       objectReference: {fileID: 0}
@@ -1120,6 +1124,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 8b8051f37bb4f39448db50fabcc13197, type: 3}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
       objectReference: {fileID: 0}
@@ -1418,6 +1426,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 8b8051f37bb4f39448db50fabcc13197, type: 3}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
@@ -2092,6 +2104,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 8b8051f37bb4f39448db50fabcc13197, type: 3}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
@@ -3053,6 +3069,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 980a02435b940ed4fb008950594517d4, type: 3}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
       objectReference: {fileID: 0}
@@ -3212,6 +3232,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 9239b3dd110ece6438c3b68902ce7b6e, type: 3}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
@@ -3623,6 +3647,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 1e5e48c18f7903248ae81b4b23c32b0e, type: 3}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
       objectReference: {fileID: 0}
@@ -3858,6 +3886,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 9239b3dd110ece6438c3b68902ce7b6e, type: 3}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
@@ -4219,6 +4251,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: c1e9c7a43942f704b8896a0dc99a3a53, type: 3}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
@@ -4999,6 +5035,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 4f5191936b06ef043ba60fb36174e48f, type: 3}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
       objectReference: {fileID: 0}
@@ -5116,6 +5156,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 4f5191936b06ef043ba60fb36174e48f, type: 3}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
@@ -5851,6 +5895,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 454759272}
     m_Modifications:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeClass
       value: 1
       objectReference: {fileID: 0}
@@ -6338,6 +6386,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1691845437}
     m_Modifications:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeClass
       value: 1
       objectReference: {fileID: 0}
@@ -6447,6 +6499,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 980a02435b940ed4fb008950594517d4, type: 3}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
@@ -6875,6 +6931,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: c1e9c7a43942f704b8896a0dc99a3a53, type: 3}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
@@ -8011,6 +8071,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 46476611}
     m_Modifications:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeClass
       value: 1
       objectReference: {fileID: 0}
@@ -8771,6 +8835,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 4f5191936b06ef043ba60fb36174e48f, type: 3}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
       objectReference: {fileID: 0}
@@ -9360,6 +9428,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 1e5e48c18f7903248ae81b4b23c32b0e, type: 3}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
@@ -10541,6 +10613,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 1e5e48c18f7903248ae81b4b23c32b0e, type: 3}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
       objectReference: {fileID: 0}
@@ -10690,6 +10766,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 980a02435b940ed4fb008950594517d4, type: 3}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
       objectReference: {fileID: 0}
@@ -10811,6 +10891,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: c1e9c7a43942f704b8896a0dc99a3a53, type: 3}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: troopName
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
