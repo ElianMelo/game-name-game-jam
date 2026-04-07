@@ -51,7 +51,7 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private void AttempBuyUpgrade()
     {
         if (isUnlocked) return;
-        bool brought = GameManager.Instance.AttemptRemoveCoin(upgradeCost);
+        bool brought = GameManager.Instance.AttemptRemoveKaijuuKnowledge(upgradeCost);
         if (!brought) return;
         currentPhase += 1;
         phaseText.text = $"{currentPhase} / {phases}";

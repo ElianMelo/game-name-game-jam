@@ -1,5 +1,6 @@
 using FIMSpace.Basics;
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum EnemyType
 {
@@ -28,6 +29,12 @@ public class EnemyController : MonoBehaviour
 
     private float currentHealth;
     private bool isDead = false;
+
+    public UnityEvent OnHurt;
+    public UnityEvent OnDead;
+    public UnityEvent OnMoveStart;
+    public UnityEvent OnMoveStop;
+    public UnityEvent OnAttack;
 
     private void Start()
     {
@@ -62,20 +69,29 @@ public class EnemyController : MonoBehaviour
         animator.speed = 1f;
     }
 
-    public void ChangeState(EnemyState playerState)
+    public void ChangeState(EnemyState enemyState)
     {
-        CurrentState = playerState;
+        if(enemyState == EnemyState.Moving)
+        {
+            OnMoveStart?.Invoke();
+        } else
+        {
+            OnMoveStop?.Invoke();
+        }
+        CurrentState = enemyState;
     }
 
     public void ReceiveDamage(float amount)
     {
         if (isDead) return;
         currentHealth -= amount;
+        OnHurt?.Invoke();
         if (currentHealth <= 0)
         {
             currentHealth = 0;
             healthBar.UpdateHealth(currentHealth, health);
-            GameManager.Instance.AddCoin(5);
+            GameManager.Instance.AddKaijuuKnowledge(5);
+            OnDead?.Invoke();
             Death();
         } else
         {

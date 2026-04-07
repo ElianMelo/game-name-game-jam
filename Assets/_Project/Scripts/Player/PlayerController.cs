@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum PlayerState { 
     Attacking,
@@ -16,6 +17,14 @@ public class PlayerController : MonoBehaviour
     public PlayerSkillController PlayerSkillController { get; private set; }
     public PlayerMovementController PlayerMovementController { get; private set; }
     public PlayerVFXController PlayerVFXController { get; private set; }
+
+    public UnityEvent OnHurt;
+    public UnityEvent OnDead;
+    public UnityEvent OnMoveStart;
+    public UnityEvent OnMoveStop;
+    public UnityEvent OnAttack;
+    public UnityEvent OnSkill;
+
 
     void Start()
     {
@@ -41,11 +50,24 @@ public class PlayerController : MonoBehaviour
 
     public void ChangeState(PlayerState playerState)
     {
+        if(playerState == PlayerState.Moving)
+        {
+            OnMoveStart?.Invoke();
+        } else
+        {
+            OnMoveStop?.Invoke();
+        }
         CurrentState = playerState;
     }
 
     public void ReceiveDamage(float amount)
     {
         currentHealth -= amount;
+        OnHurt?.Invoke();
+        if(currentHealth <= 0)
+        {
+            currentHealth = 0;
+            OnDead?.Invoke();
+        }
     }
 }

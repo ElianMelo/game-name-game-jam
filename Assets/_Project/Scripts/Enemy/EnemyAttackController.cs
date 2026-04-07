@@ -46,6 +46,8 @@ public class EnemyAttackController : MonoBehaviour
             layerMask
         );
 
+        enemyController.OnAttack?.Invoke();
+
         foreach (var hit in hits)
         {
             RegisterTriggerContact(hit);

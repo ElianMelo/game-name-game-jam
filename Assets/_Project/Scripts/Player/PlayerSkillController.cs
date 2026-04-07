@@ -65,6 +65,7 @@ public class PlayerSkillController : MonoBehaviour
         if (GameManager.Instance.currentState != GameState.KaijuControl) return;
         if (!KaijuUpgradeManager.Instance.SkillBurst.unlocked) return;
         if (!canUseSkillBurst) return;
+        playerController.OnSkill?.Invoke();
         canUseSkillBurst = false;
         animator.SetTrigger(SkillBurstAnim);
         animator.speed = KaijuUpgradeManager.Instance.SkillBurst.skillCooldown;
@@ -82,6 +83,7 @@ public class PlayerSkillController : MonoBehaviour
         if (GameManager.Instance.currentState != GameState.KaijuControl) return;
         if (!KaijuUpgradeManager.Instance.SkillArea.unlocked) return;
         if (!canUseSkillArea) return;
+        playerController.OnSkill?.Invoke();
         canUseSkillArea = false;
         animator.SetTrigger(SkillAreaAnim);
         animator.speed = KaijuUpgradeManager.Instance.SkillArea.skillCooldown;
@@ -100,6 +102,7 @@ public class PlayerSkillController : MonoBehaviour
         if (GameManager.Instance.currentState != GameState.KaijuControl) return;
         if (!KaijuUpgradeManager.Instance.SkillProjectile.unlocked) return;
         if (!canUseSkillProjectile) return;
+        playerController.OnSkill?.Invoke();
         canUseSkillProjectile = false;
         animator.SetTrigger(SkillProjectileAnim);
         animator.speed = KaijuUpgradeManager.Instance.SkillProjectile.skillCooldown;

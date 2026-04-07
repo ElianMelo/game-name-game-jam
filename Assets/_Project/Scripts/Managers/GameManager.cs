@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 {
     public float timerMaxAmount;
     public float timerCurrentAmount;
-    public int coin;
+    public int kaijuuKnowledge;
 
     public GameState currentState;
 
@@ -38,17 +38,17 @@ public class GameManager : MonoBehaviour
         InterfaceManager.Instance.UpdateTimer(timerCurrentAmount);
     }
 
-    public void AddCoin(int amount)
+    public void AddKaijuuKnowledge(int amount)
     {
-        coin += amount;
-        InterfaceManager.Instance.UpdateCoin(coin);
+        kaijuuKnowledge += amount;
+        InterfaceManager.Instance.UpdateKaijuKnowledge(kaijuuKnowledge);
     }
 
-    public bool AttemptRemoveCoin(int amount)
+    public bool AttemptRemoveKaijuuKnowledge(int amount)
     {
-        if (amount > coin) return false;
-        coin -= amount;
-        InterfaceManager.Instance.UpdateCoin(coin);
+        if (amount > kaijuuKnowledge) return false;
+        kaijuuKnowledge -= amount;
+        InterfaceManager.Instance.UpdateKaijuKnowledge(kaijuuKnowledge);
         return true;
     }
 

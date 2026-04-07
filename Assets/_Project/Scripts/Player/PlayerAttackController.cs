@@ -76,6 +76,7 @@ public class PlayerAttackController : MonoBehaviour
             layerMask
         );
 
+        playerController.OnAttack?.Invoke();
         playerController.PlayerVFXController.CreateAttackSlashVFX(sphereCastOrigin.position,
             sphereCastOrigin.forward, KaijuUpgradeManager.Instance.AttackGroup.range / 2.5f);
 

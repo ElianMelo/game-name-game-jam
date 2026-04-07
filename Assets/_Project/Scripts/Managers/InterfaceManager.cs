@@ -8,7 +8,7 @@ public class InterfaceManager : MonoBehaviour
 
     [SerializeField] private Image kaijuHealthBar;
     [SerializeField] private TMP_Text runTimer;
-    [SerializeField] private TMP_Text coinField;
+    [SerializeField] private TMP_Text kaijuKnowledgeField;
 
     private void Awake()
     {
@@ -25,9 +25,9 @@ public class InterfaceManager : MonoBehaviour
         runTimer.text = currentTimer.ToString("F0");
     }
 
-    public void UpdateCoin(int coinAmount)
+    public void UpdateKaijuKnowledge(int coinAmount)
     {
-        coinField.text = coinAmount.ToString();
+        kaijuKnowledgeField.text = coinAmount.ToString();
     }
 
     private void Update()
