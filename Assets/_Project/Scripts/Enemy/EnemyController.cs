@@ -38,6 +38,7 @@ public class EnemyController : MonoBehaviour
         healthBar = GetComponentInChildren<HealthBar>();
         PlayerController = FindFirstObjectByType<PlayerController>();
         healthBar.UpdateHealth(currentHealth, health);
+        ChangeState(EnemyState.Moving);
         GameManager.OnGameStateChanged += OnGameStateChanged;
     }
 

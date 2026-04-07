@@ -4,6 +4,9 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject soldierPrefab;
+    [SerializeField] private GameObject riderPrefab;
+    [SerializeField] private GameObject crossbowPrefab;
+    [SerializeField] private GameObject catapultPrefab;
     [SerializeField] private List<Transform> spawnPoints = new();
 
     private float currentSpawnTime = 0;

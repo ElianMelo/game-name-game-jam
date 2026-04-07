@@ -15,6 +15,11 @@ public class EnemyMovementController : MonoBehaviour
     void Update()
     {
         if (enemyController.PlayerController == null) return;
+        if(enemyController.CurrentState == EnemyState.Attacking)
+        {
+            agent.destination = transform.position;
+            return;
+        }
         if (enemyController.enemyType == EnemyType.Moving)
             agent.destination = enemyController.PlayerController.transform.position;
     }

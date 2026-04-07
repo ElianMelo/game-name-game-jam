@@ -9,10 +9,14 @@ public class EnemyAttackController : MonoBehaviour
 
     private EnemyController enemyController;
     private Coroutine checkAttackCoroutine;
+    private Animator animator;
+
+    private const string AttackAnim = "Attack";
 
     void Start()
     {
         enemyController = GetComponent<EnemyController>();
+        animator = GetComponentInChildren<Animator>();
         checkAttackCoroutine = StartCoroutine(CheckAttack());
     }
 
@@ -27,7 +31,10 @@ public class EnemyAttackController : MonoBehaviour
 
     private void AttemptAttack()
     {
-        if (Vector3.Distance(transform.position, enemyController.PlayerController.transform.position) > 0.3f) return;
+        if (Vector3.Distance(transform.position, enemyController.PlayerController.transform.position) > 3f) return;
+        animator.SetTrigger(AttackAnim);
+        animator.speed = enemyController.GetTroup().attackSpeed;
+        enemyController.ChangeState(EnemyState.Attacking);
     }
 
     public void PerformHitDamage()
