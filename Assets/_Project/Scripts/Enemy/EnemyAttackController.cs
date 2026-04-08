@@ -73,6 +73,7 @@ public class EnemyAttackController : MonoBehaviour
     public void RegisterTriggerContact(Collider other)
     {
         PlayerController playerController = other.GetComponent<PlayerController>();
+        if (playerController == null) return;
         playerController.ReceiveDamage(enemyController.GetTroup().damage);
     }
 }

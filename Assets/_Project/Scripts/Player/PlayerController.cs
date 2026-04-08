@@ -71,4 +71,13 @@ public class PlayerController : MonoBehaviour
             OnDead?.Invoke();
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Projectile"))
+        {
+            ReceiveDamage(other.GetComponent<EnemyProjectile>().damage);
+            Destroy(other.gameObject);
+        }
+    }
 }

@@ -4,7 +4,7 @@ public class EnemyProjectile : MonoBehaviour
 {
     private Vector3 direction;
     private Rigidbody rb;
-    private float damage;
+    [HideInInspector] public float damage;
 
     public void SetupData(Vector3 newDirection, float newDamage)
     {
@@ -14,15 +14,8 @@ public class EnemyProjectile : MonoBehaviour
 
     private void Start()
     {
-        rb.AddForce(direction.normalized, ForceMode.Impulse);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("Player"))
-        {
-            other.GetComponent<PlayerController>().ReceiveDamage(damage);
-            // Destroy(gameObject);
-        }
+        rb = GetComponent<Rigidbody>();
+        rb.AddForce(direction.normalized * 20f, ForceMode.Impulse);
+        Destroy(gameObject, 2f);
     }
 }

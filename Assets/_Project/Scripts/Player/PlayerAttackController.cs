@@ -78,7 +78,7 @@ public class PlayerAttackController : MonoBehaviour
 
         playerController.OnAttack?.Invoke();
         playerController.PlayerVFXController.CreateAttackSlashVFX(sphereCastOrigin.position,
-            sphereCastOrigin.forward, KaijuUpgradeManager.Instance.AttackGroup.range / 2.5f);
+            sphereCastOrigin.forward, KaijuUpgradeManager.Instance.AttackGroup.range / 3f);
 
         foreach (var hit in hits)
         {
@@ -89,6 +89,7 @@ public class PlayerAttackController : MonoBehaviour
     public void RegisterTriggerContact(Collider other)
     {
         EnemyController enemyController = other.GetComponent<EnemyController>();
+        if (enemyController == null) return;
         enemyController.ReceiveDamage(KaijuUpgradeManager.Instance.AttackGroup.damage);
     }
 }

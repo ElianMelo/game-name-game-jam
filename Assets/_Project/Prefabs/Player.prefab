@@ -110,6 +110,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd72a79983ce264e8fd2a034322f079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  OnHurt:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDead:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMoveStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMoveStop:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAttack:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSkill:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!135 &191638297006850537
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -207,6 +225,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6108680975794116980}
     m_Modifications:
+    - target: {fileID: -8932171948611633886, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -8907276252711696039, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -271,9 +293,189 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7939253385447565490, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -7679892886053045003, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -6443198611175219406, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -6122652166631305585, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -5899681650857727921, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -5490650071928370707, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -5263307034250070220, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -5210944265726564534, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -5014141804948553554, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -4828835861128201812, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -4654875306786653828, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2938361463512899576, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2750501195568244532, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2652637177948888600, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2555734329826457467, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2486420778618896525, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2320622305030361536, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -1392646226527153117, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -627057214806185787, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -253843858072460661, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 134431765959505997, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 240144763186347835, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
       propertyPath: m_Name
       value: Kaiju
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1101335783960345640, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1763112024085915508, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2764674505059608376, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879147776696953306, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483898069505667242, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619152409045022802, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714183305100716223, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762255145053974545, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3781497587926847241, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268080361714327600, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469819488887415633, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847529847629913602, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4905751835974013286, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115850148741621008, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5508161451718113525, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126604195352524321, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197368687577201221, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285828200051953197, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7559284619201060607, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7827896613639157510, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015724190599977577, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -387,8 +589,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 909187315493381194}
-    ProceduralPosition: {x: 1.0214659, y: 2.0020874, z: 0.018412948}
-    ProceduralRotation: {x: 0.000000018200666, y: 0.999708, z: -0.024166139, w: 0.0000007529276}
+    ProceduralPosition: {x: 0.00000058912275, y: 2.0020874, z: -0.43325126}
+    ProceduralRotation: {x: 0.000000018450509, y: 0.999708, z: -0.024166139, w: 0.00000076326313}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -410,8 +612,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 109775886016498953}
-    ProceduralPosition: {x: 1.0214652, y: 2.0250578, z: 0.4932574}
-    ProceduralRotation: {x: 0.0000000467837, y: 0.9980938, z: -0.061715905, w: 0.00000075660427}
+    ProceduralPosition: {x: -0.00000013595144, y: 2.0250578, z: 0.041593194}
+    ProceduralRotation: {x: 0.000000044461785, y: 0.9980938, z: -0.061715905, w: 0.0000007190534}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -433,8 +635,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 7695147849641912191}
-    ProceduralPosition: {x: 1.0214645, y: 2.0836248, z: 0.96503127}
-    ProceduralRotation: {x: 0.00000007599776, y: 0.9951568, z: -0.09829994, w: 0.0000007693768}
+    ProceduralPosition: {x: -0.00000081570846, y: 2.0836248, z: 0.51336706}
+    ProceduralRotation: {x: 0.00000007428954, y: 0.9951568, z: -0.09829994, w: 0.0000007520833}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -456,8 +658,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 5619491429602469148}
-    ProceduralPosition: {x: 1.0214636, y: 2.1912913, z: 1.5047041}
-    ProceduralRotation: {x: 0.00000007599776, y: 0.9951568, z: -0.09829994, w: 0.0000007693768}
+    ProceduralPosition: {x: -0.0000016314169, y: 2.1912913, z: 1.0530399}
+    ProceduralRotation: {x: 0.00000007428954, y: 0.9951568, z: -0.09829994, w: 0.0000007520833}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -595,8 +797,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 8906374781878665794}
-    ProceduralPosition: {x: 1.021469, y: 2.3928216, z: -1.435542}
-    ProceduralRotation: {x: -0.000000082872226, y: 0.9952002, z: 0.09785976, w: 0.00000084278213}
+    ProceduralPosition: {x: 0.0000037160053, y: 2.3928216, z: -1.8872062}
+    ProceduralRotation: {x: -0.00000007875921, y: 0.9952002, z: 0.09785976, w: 0.0000008009541}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -618,8 +820,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 3883862015978504943}
-    ProceduralPosition: {x: 1.0214704, y: 2.5605474, z: -2.2801526}
-    ProceduralRotation: {x: -0.000000082872226, y: 0.9952002, z: 0.09785976, w: 0.00000084278213}
+    ProceduralPosition: {x: 0.0000050755193, y: 2.5605474, z: -2.7318168}
+    ProceduralRotation: {x: -0.00000007875921, y: 0.9952002, z: 0.09785976, w: 0.0000008009541}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -641,8 +843,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 4043398123201152820}
-    ProceduralPosition: {x: 1.0214715, y: 2.4998245, z: -3.139273}
-    ProceduralRotation: {x: 0.000000022025455, y: 0.9993777, z: -0.03527413, w: 0.0000006240197}
+    ProceduralPosition: {x: 0.000006163131, y: 2.4998245, z: -3.5909371}
+    ProceduralRotation: {x: 0.000000022327809, y: 0.9993777, z: -0.03527413, w: 0.0000006325859}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -664,8 +866,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 6184372061255402818}
-    ProceduralPosition: {x: 1.0214726, y: 2.4130602, z: -3.996155}
-    ProceduralRotation: {x: 0.000000031574007, y: 0.9987274, z: -0.050434556, w: 0.0000006252425}
+    ProceduralPosition: {x: 0.000007250742, y: 2.4130602, z: -4.447819}
+    ProceduralRotation: {x: 0.000000032007424, y: 0.9987274, z: -0.050434556, w: 0.00000063382515}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -687,8 +889,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 431784111925623627}
-    ProceduralPosition: {x: 1.0214736, y: 2.300328, z: -4.8500595}
-    ProceduralRotation: {x: 0.000000041200817, y: 0.99784714, z: -0.06558319, w: 0.00000062686985}
+    ProceduralPosition: {x: 0.000008338353, y: 2.300328, z: -5.301724}
+    ProceduralRotation: {x: 0.000000041766363, y: 0.99784714, z: -0.06558318, w: 0.0000006354747}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -710,8 +912,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 6244687690009680141}
-    ProceduralPosition: {x: 1.0214754, y: 2.2239163, z: -5.7079773}
-    ProceduralRotation: {x: 0.000000046272472, y: 0.9990138, z: -0.044401437, w: 0.0000010411112}
+    ProceduralPosition: {x: 0.000010151039, y: 2.2239163, z: -6.1596417}
+    ProceduralRotation: {x: 0.00000004690767, y: 0.9990138, z: -0.044401437, w: 0.0000010554029}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -733,8 +935,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 2179216784460861520}
-    ProceduralPosition: {x: 1.0214769, y: 2.183965, z: -6.568363}
-    ProceduralRotation: {x: 0.000000019285245, y: 0.9997309, z: -0.023198351, w: 0.0000008310959}
+    ProceduralPosition: {x: 0.000011601187, y: 2.183965, z: -7.0200276}
+    ProceduralRotation: {x: 0.000000019549978, y: 0.9997309, z: -0.023198351, w: 0.0000008425045}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -756,8 +958,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 983724315275736060}
-    ProceduralPosition: {x: 1.0214776, y: 2.1805441, z: -7.4296694}
-    ProceduralRotation: {x: 8.245465e-10, y: 0.99999803, z: -0.0019858268, w: 0.0000004152149}
+    ProceduralPosition: {x: 0.000012326262, y: 2.1805441, z: -7.881334}
+    ProceduralRotation: {x: 8.358658e-10, y: 0.99999803, z: -0.0019858268, w: 0.00000042091494}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
