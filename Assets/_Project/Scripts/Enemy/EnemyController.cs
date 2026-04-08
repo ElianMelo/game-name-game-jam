@@ -38,7 +38,7 @@ public class EnemyController : MonoBehaviour
 
     private void Start()
     {
-        currentHealth = health;
+        currentHealth = GetTroup().health;
         animator = GetComponentInChildren<Animator>();
         EnemyMovementController = GetComponent<EnemyMovementController>();
         EnemyAttackController = GetComponent<EnemyAttackController>();
@@ -47,6 +47,12 @@ public class EnemyController : MonoBehaviour
         healthBar.UpdateHealth(currentHealth, health);
         ChangeState(EnemyState.Moving);
         GameManager.OnGameStateChanged += OnGameStateChanged;
+    }
+
+    private void Update()
+    {
+        if (enemyType == EnemyType.Stationary)
+            transform.forward = PlayerController.transform.position - transform.position;
     }
 
     private void OnDestroy()

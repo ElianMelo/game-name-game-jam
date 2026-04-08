@@ -64,7 +64,8 @@ public class PlayerController : MonoBehaviour
     {
         currentHealth -= amount;
         OnHurt?.Invoke();
-        if(currentHealth <= 0)
+        GameManager.Instance.AddTroopDamage((int)amount);
+        if (currentHealth <= 0)
         {
             currentHealth = 0;
             OnDead?.Invoke();

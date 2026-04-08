@@ -4,14 +4,25 @@ public class EnemyProjectile : MonoBehaviour
 {
     private Vector3 direction;
     private Rigidbody rb;
+    private float damage;
 
-    public void SetupDirection(Vector3 newDirection)
+    public void SetupData(Vector3 newDirection, float newDamage)
     {
         direction = newDirection;
+        damage = newDamage;
     }
 
     private void Start()
     {
-        rb.AddForce(direction * 20f, ForceMode.Impulse);
+        rb.AddForce(direction.normalized, ForceMode.Impulse);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Player"))
+        {
+            other.GetComponent<PlayerController>().ReceiveDamage(damage);
+            // Destroy(gameObject);
+        }
     }
 }

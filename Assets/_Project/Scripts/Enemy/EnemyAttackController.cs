@@ -11,6 +11,7 @@ public class EnemyAttackController : MonoBehaviour
     private EnemyController enemyController;
     private Coroutine checkAttackCoroutine;
     private Animator animator;
+    private float checkDistance = 0f;
 
     private const string AttackAnim = "Attack";
 
@@ -19,6 +20,13 @@ public class EnemyAttackController : MonoBehaviour
         enemyController = GetComponent<EnemyController>();
         animator = GetComponentInChildren<Animator>();
         checkAttackCoroutine = StartCoroutine(CheckAttack());
+        if(enemyController.enemyType == EnemyType.Moving)
+        {
+            checkDistance = 4f;
+        } else  if(enemyController.enemyType == EnemyType.Stationary)
+        {
+            checkDistance = 100f;
+        }
     }
 
     private IEnumerator CheckAttack()
@@ -32,7 +40,7 @@ public class EnemyAttackController : MonoBehaviour
 
     private void AttemptAttack()
     {
-        if (Vector3.Distance(transform.position, enemyController.PlayerController.transform.position) > 4f) return;
+        if (Vector3.Distance(transform.position, enemyController.PlayerController.transform.position) > checkDistance) return;
         animator.SetTrigger(AttackAnim);
         animator.speed = enemyController.GetTroup().attackSpeed;
         enemyController.ChangeState(EnemyState.Attacking);
@@ -59,7 +67,7 @@ public class EnemyAttackController : MonoBehaviour
         var direction = enemyController.PlayerController.transform.position - transform.position;
         var projectile = Instantiate(projectilePrefab, sphereCastOrigin.position, Quaternion.LookRotation(direction));
         var enemyProjectile = projectile.GetComponent<EnemyProjectile>();
-        enemyProjectile.SetupDirection(direction);
+        enemyProjectile.SetupData(direction, enemyController.GetTroup().damage);
     }
 
     public void RegisterTriggerContact(Collider other)

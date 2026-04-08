@@ -20,6 +20,7 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public UpgradeType upgradeType;
     public KaijuuAttibuteGroupType kaijuuAttributeGroup;
     public TroopName troopName;
+    public bool isKaijuKnowdlge;
     public float amountValue;
     public int upgradeCost;
 
@@ -51,7 +52,7 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private void AttempBuyUpgrade()
     {
         if (isUnlocked) return;
-        bool brought = GameManager.Instance.AttemptRemoveKaijuuKnowledge(upgradeCost);
+        bool brought = isKaijuKnowdlge ? GameManager.Instance.AttemptRemoveKaijuuKnowledge(upgradeCost) : GameManager.Instance.AttemptRemoveTroopDamage(upgradeCost);
         if (!brought) return;
         currentPhase += 1;
         phaseText.text = $"{currentPhase} / {phases}";

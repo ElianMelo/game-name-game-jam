@@ -9,6 +9,7 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField] private Image kaijuHealthBar;
     [SerializeField] private TMP_Text runTimer;
     [SerializeField] private TMP_Text kaijuKnowledgeField;
+    [SerializeField] private TMP_Text troopDamageField;
 
     private void Awake()
     {
@@ -28,6 +29,11 @@ public class InterfaceManager : MonoBehaviour
     public void UpdateKaijuKnowledge(int coinAmount)
     {
         kaijuKnowledgeField.text = coinAmount.ToString();
+    }
+
+    public void UpdateTroopDamage(int coinAmount)
+    {
+        troopDamageField.text = coinAmount.ToString();
     }
 
     private void Update()
