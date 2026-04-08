@@ -1,0 +1,801 @@
+fileFormatVersion: 2
+guid: 8eb736489acf157478f1bee9a2f808fd
+ModelImporter:
+  serializedVersion: 24200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: <Root Transform>
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'WendifootRibcage' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'WendifootNeck2'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      internalID: 1827226128182048838
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: WendifootPelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLThigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRThigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLCalf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRCalf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootSpine1
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootSpine2
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootNeck1
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootHead
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLCollarbone
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRCollarbone
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLUpperarm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRUpperarm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLForearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRForearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLPalm
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRPalm
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRDigit11
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRDigit12
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRDigit13
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRDigit21
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRDigit22
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRDigit23
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRDigit31
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRDigit32
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRDigit33
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRDigit41
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRDigit42
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRDigit43
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRDigit51
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRDigit52
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootRDigit53
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLDigit11
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLDigit12
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLDigit13
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLDigit21
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLDigit22
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLDigit23
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLDigit31
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLDigit32
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLDigit33
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLDigit41
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLDigit42
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLDigit43
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLDigit51
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLDigit52
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: WendifootLDigit53
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Wendifoot(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Wendifoot
+      parentName: Wendifoot(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: WendifootPelvis
+      parentName: Wendifoot(Clone)
+      position: {x: 0.00000012614925, y: 2.181015, z: -0.28247735}
+      rotation: {x: 0.49912703, y: -0.5008716, z: -0.4991269, w: 0.50087154}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+    - name: WendifootLThigh
+      parentName: WendifootPelvis
+      position: {x: -0.04536804, y: 0.12370103, z: 0.43063512}
+      rotation: {x: -0.10738527, y: 0.9896422, z: 0.050035063, w: 0.08107566}
+      scale: {x: 1, y: 0.99999976, z: 0.9999999}
+    - name: WendifootLCalf
+      parentName: WendifootLThigh
+      position: {x: -1.1682044, y: 0.00000015258789, z: 0.000000076293944}
+      rotation: {x: -0.0008369885, y: 0.0063080117, z: 0.34070206, w: 0.9401498}
+      scale: {x: 0.99999887, y: 1.000001, z: 1.0000002}
+    - name: WendifootLFoot
+      parentName: WendifootLCalf
+      position: {x: -1.1599959, y: -0.000000019073486, z: 0}
+      rotation: {x: -0.066623986, y: 0.044519596, z: -0.78302866, w: 0.61680263}
+      scale: {x: 1.0000004, y: 1, z: 1.0000001}
+    - name: WendifootRThigh
+      parentName: WendifootPelvis
+      position: {x: -0.04536804, y: 0.12370103, z: -0.43063512}
+      rotation: {x: -0.10738548, y: 0.98964214, z: -0.050035957, w: -0.081075884}
+      scale: {x: 1.0000004, y: 1, z: 1.0000005}
+    - name: WendifootRCalf
+      parentName: WendifootRThigh
+      position: {x: -1.1682045, y: 0.000000038146972, z: -0.00000015258789}
+      rotation: {x: 0.00072625134, y: -0.0063389083, z: 0.3407008, w: 0.94015014}
+      scale: {x: 1.0000008, y: 1.0000002, z: 1.0000001}
+    - name: WendifootRFoot
+      parentName: WendifootRCalf
+      position: {x: -1.1599958, y: 0.000000019073486, z: 0}
+      rotation: {x: 0.06683163, y: -0.0443303, z: -0.7830551, w: 0.6167602}
+      scale: {x: 0.9999998, y: 0.9999997, z: 1.0000002}
+    - name: WendifootSpine1
+      parentName: WendifootPelvis
+      position: {x: -0.1204335, y: -0.009214439, z: -0.000000022868662}
+      rotation: {x: 0.000000014901163, y: -0.000000029802326, z: -0.06695918, w: 0.9977557}
+      scale: {x: 0.99999976, y: 0.99999976, z: 0.9999999}
+    - name: WendifootSpine2
+      parentName: WendifootSpine1
+      position: {x: -0.9382159, y: -0.000000076293944, z: 4.5474734e-15}
+      rotation: {x: -0.000000008616912, y: -0.00000002862834, z: 0.14211679, w: 0.9898499}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: WendifootLCollarbone
+      parentName: WendifootSpine2
+      position: {x: -0.7128372, y: 0.25722423, z: 0.07935039}
+      rotation: {x: 0.053620934, y: 0.7600988, z: 0.057043903, w: 0.6450742}
+      scale: {x: 0.9999999, y: 1.0000001, z: 0.9999999}
+    - name: WendifootLUpperarm
+      parentName: WendifootLCollarbone
+      position: {x: -1.1470377, y: 0.000000076293944, z: 0.0000009155273}
+      rotation: {x: 0.14185655, y: -0.07061575, z: -0.05586009, w: 0.9857838}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1}
+    - name: WendifootLForearm
+      parentName: WendifootLUpperarm
+      position: {x: -1.3066539, y: -0.00000030517577, z: -0.00000030517577}
+      rotation: {x: 0.06412112, y: -0.020115634, z: -0.028376976, w: 0.99733573}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000004}
+    - name: WendifootLPalm
+      parentName: WendifootLForearm
+      position: {x: -1.4545013, y: 0.0000007629394, z: 0.00000061035155}
+      rotation: {x: -0.61524487, y: -0.018266356, z: -0.007082063, w: 0.7880927}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: WendifootLDigit11
+      parentName: WendifootLPalm
+      position: {x: -0.063864976, y: 0.011794433, z: 0.24849205}
+      rotation: {x: 0.29608008, y: 0.32814598, z: -0.22409491, w: 0.86858416}
+      scale: {x: 1.0000002, y: 1.0000011, z: 0.9999992}
+    - name: WendifootLDigit12
+      parentName: WendifootLDigit11
+      position: {x: -0.21518005, y: 0, z: 0}
+      rotation: {x: -0.000000029802308, y: -0.0000007450577, z: 0.03805213, w: 0.9992758}
+      scale: {x: 1.0000012, y: 0.99999994, z: 0.99999946}
+    - name: WendifootLDigit13
+      parentName: WendifootLDigit12
+      position: {x: -0.27078375, y: -0.00000015258789, z: 0}
+      rotation: {x: -0.00000010316798, y: 0.00000013975325, z: -0.045912545, w: 0.9989455}
+      scale: {x: 1.0000001, y: 1.0000002, z: 0.99999917}
+    - name: WendifootLDigit21
+      parentName: WendifootLPalm
+      position: {x: -0.4518327, y: 0.029477539, z: 0.2010524}
+      rotation: {x: 0.040301394, y: 0.06472068, z: 0.07951607, w: 0.9939136}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: WendifootLDigit22
+      parentName: WendifootLDigit21
+      position: {x: -0.3074584, y: 0, z: -0.00000015258789}
+      rotation: {x: 0.0000000707805, y: 0.00000018626447, z: 0.03448245, w: 0.9994054}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000004}
+    - name: WendifootLDigit23
+      parentName: WendifootLDigit22
+      position: {x: -0.13808426, y: 0, z: 0.00000015258789}
+      rotation: {x: 0.00000015087151, y: 0.00000020010759, z: -0.05194549, w: 0.99864995}
+      scale: {x: 1, y: 1, z: 1}
+    - name: WendifootLDigit31
+      parentName: WendifootLPalm
+      position: {x: -0.45592016, y: -0.000039367675, z: 0.04806137}
+      rotation: {x: -0.00049057597, y: 0.031235624, z: 0.07178204, w: 0.996931}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+    - name: WendifootLDigit32
+      parentName: WendifootLDigit31
+      position: {x: -0.31889457, y: 0, z: 0.00000015258789}
+      rotation: {x: 0.00000020890724, y: 0.000000765547, z: 0.04001995, w: 0.9991989}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000001}
+    - name: WendifootLDigit33
+      parentName: WendifootLDigit32
+      position: {x: -0.1428163, y: 0.00000030517577, z: -0.00000015258789}
+      rotation: {x: 0.0000002192746, y: 0.00000022867312, z: -0.030537833, w: 0.99953365}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: WendifootLDigit41
+      parentName: WendifootLPalm
+      position: {x: -0.45572227, y: 0.0004898071, z: -0.08987976}
+      rotation: {x: -0.050497074, y: 0.029758941, z: 0.08012447, w: 0.9950601}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: WendifootLDigit42
+      parentName: WendifootLDigit41
+      position: {x: -0.30410635, y: 0, z: -0.000000076293944}
+      rotation: {x: 0.00000023096794, y: 0.0000002374872, z: 0.00000033254028, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 1.0000001}
+    - name: WendifootLDigit43
+      parentName: WendifootLDigit42
+      position: {x: -0.16233665, y: -0.00000030517577, z: 0.00000015258789}
+      rotation: {x: 0.0000004746139, y: 0.00000010026496, z: -0.021780604, w: 0.99976283}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
+    - name: WendifootLDigit51
+      parentName: WendifootLPalm
+      position: {x: -0.44136992, y: -0.06639984, z: -0.21448639}
+      rotation: {x: -0.07680153, y: -0.0030196211, z: 0.061433867, w: 0.9951474}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1}
+    - name: WendifootLDigit52
+      parentName: WendifootLDigit51
+      position: {x: -0.29405043, y: -0.00000061035155, z: 0.00000015258789}
+      rotation: {x: 0.00000018626446, y: 0.00000012665984, z: 0.040688474, w: 0.99917185}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: WendifootLDigit53
+      parentName: WendifootLDigit52
+      position: {x: -0.14380218, y: 0, z: 0.000000076293944}
+      rotation: {x: 0.00000003715273, y: 0.00000020973646, z: -0.047572304, w: 0.9988678}
+      scale: {x: 1.0000004, y: 0.99999994, z: 1.0000002}
+    - name: WendifootRCollarbone
+      parentName: WendifootSpine2
+      position: {x: -0.7128372, y: 0.25722423, z: -0.07935039}
+      rotation: {x: 0.05362094, y: 0.76009876, z: -0.05704406, w: -0.6450741}
+      scale: {x: 1.0000002, y: 1, z: 1.0000001}
+    - name: WendifootRUpperarm
+      parentName: WendifootRCollarbone
+      position: {x: -1.1470377, y: -0.000000038146972, z: -0.0000009155273}
+      rotation: {x: -0.1418566, y: 0.07061548, z: -0.055859897, w: 0.9857839}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000001}
+    - name: WendifootRForearm
+      parentName: WendifootRUpperarm
+      position: {x: -1.3066539, y: -0.0000003814697, z: 0.00000030517577}
+      rotation: {x: -0.06412101, y: 0.020115316, z: -0.028377846, w: 0.99733573}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: WendifootRPalm
+      parentName: WendifootRForearm
+      position: {x: -1.4545016, y: -0.0000009918213, z: 0.0000012207031}
+      rotation: {x: 0.61524457, y: 0.018267125, z: -0.007082089, w: 0.78809285}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000011}
+    - name: WendifootRDigit11
+      parentName: WendifootRPalm
+      position: {x: -0.063864745, y: 0.011794433, z: -0.24849205}
+      rotation: {x: -0.29607916, y: -0.32814404, z: -0.22409558, w: 0.86858493}
+      scale: {x: 1.0000004, y: 1, z: 1.000001}
+    - name: WendifootRDigit12
+      parentName: WendifootRDigit11
+      position: {x: -0.21517982, y: 0.00000015258789, z: -0.00000030517577}
+      rotation: {x: -0.00000047683716, y: -0.00000071525574, z: 0.038051292, w: 0.99927586}
+      scale: {x: 0.99999887, y: 0.9999997, z: 1.0000008}
+    - name: WendifootRDigit13
+      parentName: WendifootRDigit12
+      position: {x: -0.27078342, y: 0.00000015258789, z: 0}
+      rotation: {x: -0.00000030460504, y: -0.0000000855315, z: -0.045913327, w: 0.9989455}
+      scale: {x: 0.99999905, y: 1, z: 1.0000013}
+    - name: WendifootRDigit21
+      parentName: WendifootRPalm
+      position: {x: -0.45183256, y: 0.02947815, z: -0.2010524}
+      rotation: {x: -0.040300902, y: -0.06472054, z: 0.079515986, w: 0.9939137}
+      scale: {x: 0.99999917, y: 1.0000002, z: 1.0000012}
+    - name: WendifootRDigit22
+      parentName: WendifootRDigit21
+      position: {x: -0.30745804, y: 0.00000030517577, z: 0.00000015258789}
+      rotation: {x: 0.000000055879347, y: 0.00000017136334, z: 0.034481753, w: 0.9994054}
+      scale: {x: 0.99999905, y: 1, z: 1.0000012}
+    - name: WendifootRDigit23
+      parentName: WendifootRDigit22
+      position: {x: -0.1380841, y: 0, z: 0.00000015258789}
+      rotation: {x: 0.000000070382065, y: 0.0000003751044, z: -0.051946513, w: 0.9986499}
+      scale: {x: 0.99999917, y: 1.0000001, z: 1.000001}
+    - name: WendifootRDigit31
+      parentName: WendifootRPalm
+      position: {x: -0.4559203, y: -0.000038757324, z: -0.04806076}
+      rotation: {x: 0.0004908741, y: -0.031235067, z: 0.07178104, w: 0.99693114}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000012}
+    - name: WendifootRDigit32
+      parentName: WendifootRDigit31
+      position: {x: -0.31889442, y: 0, z: 0.00000030517577}
+      rotation: {x: 0.0000002062006, y: -0.00000008009372, z: 0.040018976, w: 0.999199}
+      scale: {x: 0.9999992, y: 1.0000001, z: 1.0000013}
+    - name: WendifootRDigit33
+      parentName: WendifootRDigit32
+      position: {x: -0.14281623, y: 0, z: 0}
+      rotation: {x: 0.0000002106976, y: 0.00000026496835, z: -0.030538764, w: 0.9995336}
+      scale: {x: 0.99999905, y: 0.99999994, z: 1.0000012}
+    - name: WendifootRDigit41
+      parentName: WendifootRPalm
+      position: {x: -0.45572248, y: 0.00049072265, z: 0.08988037}
+      rotation: {x: 0.05049737, y: -0.029758397, z: 0.08012392, w: 0.9950601}
+      scale: {x: 0.9999991, y: 1.0000001, z: 1.0000013}
+    - name: WendifootRDigit42
+      parentName: WendifootRDigit41
+      position: {x: -0.30410606, y: 0.00000030517577, z: 0.000000076293944}
+      rotation: {x: 0.00000024214384, y: 0.0000002738088, z: -0.00000063516194, w: 1}
+      scale: {x: 0.9999992, y: 1.0000002, z: 1.0000012}
+    - name: WendifootRDigit43
+      parentName: WendifootRDigit42
+      position: {x: -0.16233665, y: 0.00000030517577, z: 0.00000015258789}
+      rotation: {x: 0.00000029659407, y: 0.00000017546746, z: -0.02178173, w: 0.9997628}
+      scale: {x: 0.9999994, y: 1, z: 1.0000015}
+    - name: WendifootRDigit51
+      parentName: WendifootRPalm
+      position: {x: -0.44137022, y: -0.066398926, z: 0.21448684}
+      rotation: {x: 0.07680156, y: 0.0030200533, z: 0.061434172, w: 0.9951474}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000015}
+    - name: WendifootRDigit52
+      parentName: WendifootRDigit51
+      position: {x: -0.29405028, y: 0.00000061035155, z: 0.00000030517577}
+      rotation: {x: 0.00000021606684, y: 0.0000001899898, z: 0.04068747, w: 0.999172}
+      scale: {x: 0.9999986, y: 1, z: 1.0000005}
+    - name: WendifootRDigit53
+      parentName: WendifootRDigit52
+      position: {x: -0.14380196, y: 0.00000030517577, z: 0}
+      rotation: {x: 0.00000011305296, y: 0.00000035070505, z: -0.0475734, w: 0.99886775}
+      scale: {x: 0.9999999, y: 0.99999994, z: 1.0000006}
+    - name: WendifootRibcage
+      parentName: WendifootSpine2
+      position: {x: -0.7992349, y: 0, z: -1.8189894e-14}
+      rotation: {x: -1.0397816e-10, y: 0.000000059604552, z: -0.07725764, w: 0.9970112}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1}
+    - name: WendifootNeck1
+      parentName: WendifootRibcage
+      position: {x: -0.0020925903, y: -0.009214439, z: -0.000000017695875}
+      rotation: {x: -0.000012287883, y: 0.00005658816, z: -0.11651817, w: 0.99318856}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: WendifootNeck2
+      parentName: WendifootNeck1
+      position: {x: -0.3116751, y: 0, z: 7.4505804e-11}
+      rotation: {x: -0.000000015333171, y: -0.000000022278982, z: -0.24333118, w: 0.9699433}
+      scale: {x: 1.0000005, y: 1.0000008, z: 1.0000006}
+    - name: WendifootHead
+      parentName: WendifootNeck2
+      position: {x: -0.3116751, y: 0, z: -7.4505804e-11}
+      rotation: {x: 0.00006136155, y: -0.00007910036, z: 0.20611016, w: 0.9785288}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000001}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 1ba6f1b46fc6e334aa3a5291d50c45e6,
+    type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
