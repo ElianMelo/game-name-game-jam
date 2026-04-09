@@ -77,8 +77,8 @@ public class PlayerAttackController : MonoBehaviour
         //);
 
         playerController.OnAttack?.Invoke();
-        playerController.PlayerVFXController.CreateAttackSlashVFX(sphereCastOrigin.position,
-            sphereCastOrigin.forward, KaijuUpgradeManager.Instance.AttackGroup.range, KaijuUpgradeManager.Instance.AttackGroup.damage);
+        playerController.PlayerVFXController.CreateAttackVFX(sphereCastOrigin.position,
+            sphereCastOrigin.forward, KaijuUpgradeManager.Instance.AttackGroup.range, KaijuUpgradeManager.Instance.AttackGroup.damage, VFXList.Slash);
 
         //foreach (var hit in hits)
         //{

@@ -117,19 +117,19 @@ public class PlayerSkillController : MonoBehaviour
 
     public void PerformBurstSkillHitDamage()
     {
-        playerController.PlayerVFXController.CreateBurstSkillVFX(skillBurstOrigin.position,
-            skillBurstOrigin.forward, KaijuUpgradeManager.Instance.SkillBurst.range, KaijuUpgradeManager.Instance.SkillBurst.damage);
+        playerController.PlayerVFXController.CreateAttackVFX(skillBurstOrigin.position,
+            skillBurstOrigin.forward, KaijuUpgradeManager.Instance.SkillBurst.range, KaijuUpgradeManager.Instance.SkillBurst.damage, VFXList.Burst);
     }
 
     public void PerformAreaSkillHitDamage()
     {
-        playerController.PlayerVFXController.CreateAreaSkillVFX(skillAreaOrigin.position,
-            skillAreaOrigin.forward, KaijuUpgradeManager.Instance.SkillArea.range, KaijuUpgradeManager.Instance.SkillArea.damage);
+        playerController.PlayerVFXController.CreateAttackVFX(skillAreaOrigin.position,
+            skillAreaOrigin.forward, KaijuUpgradeManager.Instance.SkillArea.range, KaijuUpgradeManager.Instance.SkillArea.damage, VFXList.Area);
     }
 
     public void PerformProjectileSkillHitDamage()
     {
-        playerController.PlayerVFXController.CreateProjectileSkillVFX(skillProjectileOrigin.position,
-            skillProjectileOrigin.forward, KaijuUpgradeManager.Instance.SkillProjectile.range, KaijuUpgradeManager.Instance.SkillProjectile.damage);
+        playerController.PlayerVFXController.CreateAttackVFX(skillProjectileOrigin.position,
+            skillProjectileOrigin.forward, KaijuUpgradeManager.Instance.SkillProjectile.range, KaijuUpgradeManager.Instance.SkillProjectile.damage, VFXList.Projectile);
     }
 }
