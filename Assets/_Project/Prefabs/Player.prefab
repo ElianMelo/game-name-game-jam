@@ -619,8 +619,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.5
-  m_Center: {x: 0, y: 1.1673297, z: 0}
+  m_Radius: 1.4317923
+  m_Center: {x: -0.097133994, y: 1.5168519, z: 0.37844515}
 --- !u!114 &5154967787236046290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -658,6 +658,133 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
+--- !u!1 &8286498732737906183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5037132696429176605}
+  - component: {fileID: 602718160561006218}
+  - component: {fileID: 6032290031205718381}
+  m_Layer: 7
+  m_Name: Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5037132696429176605
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8286498732737906183}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 9.101726, z: 10.522226}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5581635975854591186}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &602718160561006218
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8286498732737906183}
+  m_Enabled: 1
+  serializedVersion: 12
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1.98
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0.18
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!114 &6032290031205718381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8286498732737906183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1 &8936024221454100038
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,6 +1082,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4085372858301527367}
+    - targetCorrespondingSourceObject: {fileID: -3643067158284791797, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5037132696429176605}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
       insertIndex: -1
@@ -1069,8 +1199,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 909187315493381194}
-    ProceduralPosition: {x: 1.0214659, y: 2.0020874, z: 0.018412948}
-    ProceduralRotation: {x: 0.000000018200666, y: 0.999708, z: -0.024166139, w: 0.0000007529276}
+    ProceduralPosition: {x: 0.00000058912275, y: 2.0020874, z: -0.43325126}
+    ProceduralRotation: {x: 0.000000018450509, y: 0.999708, z: -0.024166139, w: 0.00000076326313}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -1092,8 +1222,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 109775886016498953}
-    ProceduralPosition: {x: 1.0214652, y: 2.0250578, z: 0.4932574}
-    ProceduralRotation: {x: 0.0000000467837, y: 0.9980938, z: -0.061715905, w: 0.00000075660427}
+    ProceduralPosition: {x: -0.00000013595144, y: 2.0250578, z: 0.041593194}
+    ProceduralRotation: {x: 0.000000044461785, y: 0.9980938, z: -0.061715905, w: 0.0000007190534}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -1115,8 +1245,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 7695147849641912191}
-    ProceduralPosition: {x: 1.0214645, y: 2.0836248, z: 0.96503127}
-    ProceduralRotation: {x: 0.00000007599776, y: 0.9951568, z: -0.09829994, w: 0.0000007693768}
+    ProceduralPosition: {x: -0.00000081570846, y: 2.0836248, z: 0.51336706}
+    ProceduralRotation: {x: 0.00000007428954, y: 0.9951568, z: -0.09829994, w: 0.0000007520833}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -1138,8 +1268,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 5619491429602469148}
-    ProceduralPosition: {x: 1.0214636, y: 2.1912913, z: 1.5047041}
-    ProceduralRotation: {x: 0.00000007599776, y: 0.9951568, z: -0.09829994, w: 0.0000007693768}
+    ProceduralPosition: {x: -0.0000016314169, y: 2.1912913, z: 1.0530399}
+    ProceduralRotation: {x: 0.00000007428954, y: 0.9951568, z: -0.09829994, w: 0.0000007520833}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -1355,8 +1485,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 8906374781878665794}
-    ProceduralPosition: {x: 1.021469, y: 2.3928216, z: -1.435542}
-    ProceduralRotation: {x: -0.000000082872226, y: 0.9952002, z: 0.09785976, w: 0.00000084278213}
+    ProceduralPosition: {x: 0.0000037160053, y: 2.3928216, z: -1.8872062}
+    ProceduralRotation: {x: -0.00000007875921, y: 0.9952002, z: 0.09785976, w: 0.0000008009541}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -1378,8 +1508,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 3883862015978504943}
-    ProceduralPosition: {x: 1.0214704, y: 2.5605474, z: -2.2801526}
-    ProceduralRotation: {x: -0.000000082872226, y: 0.9952002, z: 0.09785976, w: 0.00000084278213}
+    ProceduralPosition: {x: 0.0000050755193, y: 2.5605474, z: -2.7318168}
+    ProceduralRotation: {x: -0.00000007875921, y: 0.9952002, z: 0.09785976, w: 0.0000008009541}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -1401,8 +1531,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 4043398123201152820}
-    ProceduralPosition: {x: 1.0214715, y: 2.4998245, z: -3.139273}
-    ProceduralRotation: {x: 0.000000022025455, y: 0.9993777, z: -0.03527413, w: 0.0000006240197}
+    ProceduralPosition: {x: 0.000006163131, y: 2.4998245, z: -3.5909371}
+    ProceduralRotation: {x: 0.000000022327809, y: 0.9993777, z: -0.03527413, w: 0.0000006325859}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -1424,8 +1554,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 6184372061255402818}
-    ProceduralPosition: {x: 1.0214726, y: 2.4130602, z: -3.996155}
-    ProceduralRotation: {x: 0.000000031574007, y: 0.9987274, z: -0.050434556, w: 0.0000006252425}
+    ProceduralPosition: {x: 0.000007250742, y: 2.4130602, z: -4.447819}
+    ProceduralRotation: {x: 0.000000032007424, y: 0.9987274, z: -0.050434556, w: 0.00000063382515}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -1447,8 +1577,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 431784111925623627}
-    ProceduralPosition: {x: 1.0214736, y: 2.300328, z: -4.8500595}
-    ProceduralRotation: {x: 0.000000041200817, y: 0.99784714, z: -0.06558319, w: 0.00000062686985}
+    ProceduralPosition: {x: 0.000008338353, y: 2.300328, z: -5.301724}
+    ProceduralRotation: {x: 0.000000041766363, y: 0.99784714, z: -0.06558318, w: 0.0000006354747}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -1470,8 +1600,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 6244687690009680141}
-    ProceduralPosition: {x: 1.0214754, y: 2.2239163, z: -5.7079773}
-    ProceduralRotation: {x: 0.000000046272472, y: 0.9990138, z: -0.044401437, w: 0.0000010411112}
+    ProceduralPosition: {x: 0.000010151039, y: 2.2239163, z: -6.1596417}
+    ProceduralRotation: {x: 0.00000004690767, y: 0.9990138, z: -0.044401437, w: 0.0000010554029}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -1493,8 +1623,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 2179216784460861520}
-    ProceduralPosition: {x: 1.0214769, y: 2.183965, z: -6.568363}
-    ProceduralRotation: {x: 0.000000019285245, y: 0.9997309, z: -0.023198351, w: 0.0000008310959}
+    ProceduralPosition: {x: 0.000011601187, y: 2.183965, z: -7.0200276}
+    ProceduralRotation: {x: 0.000000019549978, y: 0.9997309, z: -0.023198351, w: 0.0000008425045}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -1516,8 +1646,8 @@ MonoBehaviour:
     CollisionRadius: 1
     ColliderOffset: {x: 0, y: 0, z: 0}
     transform: {fileID: 983724315275736060}
-    ProceduralPosition: {x: 1.0214776, y: 2.1805441, z: -7.4296694}
-    ProceduralRotation: {x: 8.245465e-10, y: 0.99999803, z: -0.0019858268, w: 0.0000004152149}
+    ProceduralPosition: {x: 0.000012326262, y: 2.1805441, z: -7.881334}
+    ProceduralRotation: {x: 8.358658e-10, y: 0.99999803, z: -0.0019858268, w: 0.00000042091494}
     HelperDiffPosition: {x: 0, y: 0, z: 0}
     HelperDiffRoation: {x: 0, y: 0, z: 0, w: 0}
     PreviousPosition: {x: 0, y: 0, z: 0}
@@ -1615,6 +1745,11 @@ Transform:
 --- !u!4 &4043398123201152820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4042478520410266605, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+  m_PrefabInstance: {fileID: 1352263202348249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5581635975854591186 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3643067158284791797, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
   m_PrefabInstance: {fileID: 1352263202348249}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &5619491429602469148 stripped
