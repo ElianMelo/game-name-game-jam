@@ -17616,8 +17616,8 @@ MonoBehaviour:
     health: 100
     damage: 20
     speed: 10
-    range: 2
-    attackSpeed: 2
+    range: 50
+    attackSpeed: 1
     spawnAmount: 1
     spawnSpeed: 1
 --- !u!114 &6812669397543573969

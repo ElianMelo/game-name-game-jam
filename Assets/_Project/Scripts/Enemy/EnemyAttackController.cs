@@ -68,7 +68,6 @@ public class EnemyAttackController : MonoBehaviour
         var projectile = Instantiate(projectilePrefab, sphereCastOrigin.position, Quaternion.LookRotation(direction));
         var enemyProjectile = projectile.GetComponent<EnemyProjectile>();
         enemyProjectile.SetupData(direction, enemyController.GetTroup().damage);
-        Debug.Log("Boulder!?");
     }
 
     public void RegisterTriggerContact(Collider other)
