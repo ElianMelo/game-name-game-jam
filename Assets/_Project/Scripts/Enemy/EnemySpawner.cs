@@ -43,9 +43,9 @@ public class EnemySpawner : MonoBehaviour
         switch (troopName)
         {
             case TroopName.Soldier: return soldierPrefab;
-            case TroopName.Rider: return soldierPrefab;
+            case TroopName.Rider: return riderPrefab;
             case TroopName.Crossbow: return crossbowPrefab;
-            case TroopName.Catapult: return crossbowPrefab;
+            case TroopName.Catapult: return catapultPrefab;
         }
         return null;
     }
