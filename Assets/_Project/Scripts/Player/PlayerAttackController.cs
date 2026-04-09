@@ -70,20 +70,20 @@ public class PlayerAttackController : MonoBehaviour
 
     public void PerformHitDamage()
     {
-        Collider[] hits = Physics.OverlapSphere(
-            sphereCastOrigin.position,
-            KaijuUpgradeManager.Instance.AttackGroup.range,
-            layerMask
-        );
+        //Collider[] hits = Physics.OverlapSphere(
+        //    sphereCastOrigin.position,
+        //    KaijuUpgradeManager.Instance.AttackGroup.range,
+        //    layerMask
+        //);
 
         playerController.OnAttack?.Invoke();
         playerController.PlayerVFXController.CreateAttackSlashVFX(sphereCastOrigin.position,
-            sphereCastOrigin.forward, KaijuUpgradeManager.Instance.AttackGroup.range / 3f);
+            sphereCastOrigin.forward, KaijuUpgradeManager.Instance.AttackGroup.range, KaijuUpgradeManager.Instance.AttackGroup.damage);
 
-        foreach (var hit in hits)
-        {
-            RegisterTriggerContact(hit);
-        }
+        //foreach (var hit in hits)
+        //{
+        //    RegisterTriggerContact(hit);
+        //}
     }
 
     public void RegisterTriggerContact(Collider other)
