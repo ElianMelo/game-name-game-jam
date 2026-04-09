@@ -6984,7 +6984,7 @@ MonoBehaviour:
   soldierPrefab: {fileID: 5596191583806849608, guid: 8a12bf738d691594b94cf828d263e441, type: 3}
   riderPrefab: {fileID: 96379828093764967, guid: d1cdd0127b6835a439a1039feef16952, type: 3}
   crossbowPrefab: {fileID: 5596191583806849608, guid: ef399d61e202c7246884712b866403be, type: 3}
-  catapultPrefab: {fileID: 5596191583806849608, guid: ef399d61e202c7246884712b866403be, type: 3}
+  catapultPrefab: {fileID: 5596191583806849608, guid: ed43dfdde5acd4a48ad3bd2175fb37b1, type: 3}
   spawnPoints:
   - {fileID: 1912799950}
   - {fileID: 255241562}
