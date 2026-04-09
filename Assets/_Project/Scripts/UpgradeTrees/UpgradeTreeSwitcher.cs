@@ -6,6 +6,8 @@ public class UpgradeTreeSwitcher : MonoBehaviour
 {
     public Button kaijuuTreeButton;
     public Button troopsTreeButton;
+    public GameObject kaijuuTreeSelected;
+    public GameObject troopsTreeSelected;
     public Button playGameButton;
     public GameObject visuals;
 
@@ -27,6 +29,7 @@ public class UpgradeTreeSwitcher : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        kaijuuTreeSelected.SetActive(true);
         playGameButton.onClick.AddListener(OnPlayGameButtonPressed);
         kaijuuTreeButton.onClick.AddListener(SwitchKaijuuTree);
         troopsTreeButton.onClick.AddListener(SwitchTroopsTree);
@@ -88,12 +91,16 @@ public class UpgradeTreeSwitcher : MonoBehaviour
     {
         kaijuuTreeControl.ShowVisuals();
         troopsTreeControl.HideVisuals();
+        kaijuuTreeSelected.SetActive(true);
+        troopsTreeSelected.SetActive(false);
     }
 
     private void SwitchTroopsTree()
     {
         troopsTreeControl.ShowVisuals();
         kaijuuTreeControl.HideVisuals();
+        troopsTreeSelected.SetActive(true);
+        kaijuuTreeSelected.SetActive(false);
     }
 
     private void UnlockBurstTree()
