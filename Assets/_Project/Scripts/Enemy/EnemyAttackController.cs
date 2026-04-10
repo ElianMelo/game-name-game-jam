@@ -7,6 +7,7 @@ public class EnemyAttackController : MonoBehaviour
     public Transform sphereCastOrigin;
     public LayerMask layerMask;
     public GameObject projectilePrefab;
+    public AnimationClip attackClip;
 
     private EnemyController enemyController;
     private Coroutine checkAttackCoroutine;
@@ -33,7 +34,7 @@ public class EnemyAttackController : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(1 / enemyController.GetTroup().attackSpeed);
+            yield return new WaitForSeconds(attackClip.length / enemyController.GetTroup().attackSpeed);
             AttemptAttack();
         }
     }

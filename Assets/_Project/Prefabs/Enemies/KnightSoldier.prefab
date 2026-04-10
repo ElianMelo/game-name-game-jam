@@ -630,6 +630,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   projectilePrefab: {fileID: 0}
+  attackClip: {fileID: 7400000, guid: ff4efef45cdb09d47bd7d0dca695e881, type: 2}
 --- !u!1001 &3024812423299452869
 PrefabInstance:
   m_ObjectHideFlags: 0

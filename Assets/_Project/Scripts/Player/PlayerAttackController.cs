@@ -6,6 +6,7 @@ public class PlayerAttackController : MonoBehaviour
     [SerializeField] private Transform sphereCastOrigin;
     [SerializeField] private InputActionReference attack;
     [SerializeField] public LayerMask layerMask;
+    [SerializeField] public AnimationClip attackClip;
 
     private Animator animator;
     private PlayerController playerController;
@@ -46,7 +47,7 @@ public class PlayerAttackController : MonoBehaviour
         currentAttackCooldown -= Time.deltaTime;
         if(currentAttackCooldown <= 0)
         {
-            currentAttackCooldown = 1 / KaijuUpgradeManager.Instance.AttackGroup.attackSpeed;
+            currentAttackCooldown = attackClip.length / KaijuUpgradeManager.Instance.AttackGroup.attackSpeed;
             canAttack = true;
         }
     }

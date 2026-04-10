@@ -570,6 +570,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
+  attackClip: {fileID: 7400000, guid: 856b80065911a8b4d8a053d215d936a3, type: 2}
 --- !u!114 &878034753190070291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -658,6 +659,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
+  burstClip: {fileID: 7400000, guid: 5e9bb3eb04174e5408f33e0a27a897a4, type: 2}
+  areaClip: {fileID: 7400000, guid: 0ae6a5da1c19f5049bfe0a7f543efcb5, type: 2}
+  projectileClip: {fileID: 7400000, guid: 5d71ebe7d1ec10f48b9b58ea23f0cde0, type: 2}
 --- !u!1 &8286498732737906183
 GameObject:
   m_ObjectHideFlags: 0

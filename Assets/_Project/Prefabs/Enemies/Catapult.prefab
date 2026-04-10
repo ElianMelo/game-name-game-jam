@@ -172,6 +172,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   projectilePrefab: {fileID: 9092007614670662137, guid: d5b37e40fab718a49a3b1f21ddf2214c, type: 3}
+  attackClip: {fileID: 7400000, guid: e74a42e0057c11747bd53c39673ee73b, type: 2}
 --- !u!1 &7592347300390908499
 GameObject:
   m_ObjectHideFlags: 0
