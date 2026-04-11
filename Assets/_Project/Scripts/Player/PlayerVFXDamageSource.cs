@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerVFXDamageSource : MonoBehaviour
@@ -8,6 +9,12 @@ public class PlayerVFXDamageSource : MonoBehaviour
     {
         damage = newDamage;
         vfxCollider = GetComponent<Collider>();
+        StartCoroutine(DisableCollider());
+        IEnumerator DisableCollider()
+        {
+            yield return new WaitForSeconds(0.1f);
+            vfxCollider.enabled = false;
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
