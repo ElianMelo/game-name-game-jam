@@ -44,7 +44,7 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void OnPointerEnter(PointerEventData eventData)
     {
         OnMouseEnter?.Invoke();
-        TooltipSystemManager.Show($"{upgradeType.ToString()} \n Amount: {amountValue} \n Cost: {upgradeCost}");
+        TooltipSystemManager.Show($"{ConvertUpgradeTypeToText(upgradeType)} \n Amount: {amountValue} \n Cost: {upgradeCost}");
         if (isUnlocked) return;
         background.color = hoverColor;
         background.gameObject.SetActive(true);
@@ -56,6 +56,27 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         TooltipSystemManager.Hide();
         if (isUnlocked) return;
         background.gameObject.SetActive(false);
+    }
+
+    private string ConvertUpgradeTypeToText(UpgradeType upgradeType)
+    {   
+        switch (upgradeType)
+        {
+            case UpgradeType.Damage:
+            case UpgradeType.Range:
+            case UpgradeType.Speed:
+            case UpgradeType.Cooldown:
+            case UpgradeType.Health:
+            case UpgradeType.Unlock:
+                return upgradeType.ToString();
+            case UpgradeType.AttackSpeed:
+                return "Attack Speed";
+            case UpgradeType.SpawnAmount:
+                return "Spawn Units";
+            case UpgradeType.SpawnSpeed:
+                return "Spawn Speed";
+        }
+        return "";
     }
 
     private void AttempBuyUpgrade()
