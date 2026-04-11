@@ -11,6 +11,9 @@ public class PlayerSkillController : MonoBehaviour
     [SerializeField] private InputActionReference skillArea;
     [SerializeField] private InputActionReference skillProjectile;
     [SerializeField] public LayerMask layerMask;
+    [SerializeField] public AnimationClip burstClip;
+    [SerializeField] public AnimationClip areaClip;
+    [SerializeField] public AnimationClip projectileClip;
 
     private Animator animator;
     private PlayerController playerController;
@@ -73,7 +76,7 @@ public class PlayerSkillController : MonoBehaviour
         StartCoroutine(ResetBurstSkill());
         IEnumerator ResetBurstSkill()
         {
-            yield return new WaitForSeconds(1 / KaijuUpgradeManager.Instance.SkillBurst.skillCooldown);
+            yield return new WaitForSeconds(burstClip.length / KaijuUpgradeManager.Instance.SkillBurst.skillCooldown);
             canUseSkillBurst = true;
         }
     }
@@ -91,7 +94,7 @@ public class PlayerSkillController : MonoBehaviour
         StartCoroutine(ResetAreaSkill());
         IEnumerator ResetAreaSkill()
         {
-            yield return new WaitForSeconds(1 / KaijuUpgradeManager.Instance.SkillArea.skillCooldown);
+            yield return new WaitForSeconds(areaClip.length / KaijuUpgradeManager.Instance.SkillArea.skillCooldown);
             canUseSkillArea = true;
         }
     }
@@ -110,26 +113,26 @@ public class PlayerSkillController : MonoBehaviour
         StartCoroutine(ResetProjectileSkill());
         IEnumerator ResetProjectileSkill()
         {
-            yield return new WaitForSeconds(1 / KaijuUpgradeManager.Instance.SkillProjectile.skillCooldown);
+            yield return new WaitForSeconds(projectileClip.length / KaijuUpgradeManager.Instance.SkillProjectile.skillCooldown);
             canUseSkillProjectile = true;
         }
     }
 
     public void PerformBurstSkillHitDamage()
     {
-        playerController.PlayerVFXController.CreateBurstSkillVFX(skillBurstOrigin.position,
-            skillBurstOrigin.forward, KaijuUpgradeManager.Instance.SkillBurst.range, KaijuUpgradeManager.Instance.SkillBurst.damage);
+        playerController.PlayerVFXController.CreateAttackVFX(skillBurstOrigin.position,
+            skillBurstOrigin.forward, KaijuUpgradeManager.Instance.SkillBurst.range, KaijuUpgradeManager.Instance.SkillBurst.damage, VFXList.Burst);
     }
 
     public void PerformAreaSkillHitDamage()
     {
-        playerController.PlayerVFXController.CreateAreaSkillVFX(skillAreaOrigin.position,
-            skillAreaOrigin.forward, KaijuUpgradeManager.Instance.SkillArea.range, KaijuUpgradeManager.Instance.SkillArea.damage);
+        playerController.PlayerVFXController.CreateAttackVFX(skillAreaOrigin.position,
+            skillAreaOrigin.forward, KaijuUpgradeManager.Instance.SkillArea.range, KaijuUpgradeManager.Instance.SkillArea.damage, VFXList.Area);
     }
 
     public void PerformProjectileSkillHitDamage()
     {
-        playerController.PlayerVFXController.CreateProjectileSkillVFX(skillProjectileOrigin.position,
-            skillProjectileOrigin.forward, KaijuUpgradeManager.Instance.SkillProjectile.range, KaijuUpgradeManager.Instance.SkillProjectile.damage);
+        playerController.PlayerVFXController.CreateAttackVFX(skillProjectileOrigin.position,
+            skillProjectileOrigin.forward, KaijuUpgradeManager.Instance.SkillProjectile.range, KaijuUpgradeManager.Instance.SkillProjectile.damage, VFXList.Projectile);
     }
 }

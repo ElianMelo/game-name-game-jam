@@ -39,6 +39,7 @@ public class EnemyController : MonoBehaviour
     private void Start()
     {
         currentHealth = GetTroup().health;
+        health = currentHealth;
         animator = GetComponentInChildren<Animator>();
         EnemyMovementController = GetComponent<EnemyMovementController>();
         EnemyAttackController = GetComponent<EnemyAttackController>();

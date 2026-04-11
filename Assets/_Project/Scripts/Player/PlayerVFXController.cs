@@ -1,5 +1,13 @@
 using UnityEngine;
 
+public enum VFXList
+{
+    Slash,
+    Burst,
+    Area,
+    Projectile
+}
+
 public class PlayerVFXController : MonoBehaviour
 {
     public GameObject attackSlashVFX;
@@ -7,38 +15,24 @@ public class PlayerVFXController : MonoBehaviour
     public GameObject areaVFX;
     public GameObject projectileVFX;
 
-    public void CreateAttackSlashVFX(Vector3 position, Vector3 forward, float scale = 1f)
+    private GameObject GetPrefabBaseOnVFXList(VFXList vfxList)
     {
-        GameObject currentVfx = Instantiate(attackSlashVFX, position, Quaternion.identity);
-        currentVfx.transform.localScale = new Vector3 (scale, scale, scale);
-        currentVfx.transform.forward = forward;
-        Destroy(currentVfx, 2f);
+        switch (vfxList)
+        {
+            case VFXList.Slash: return attackSlashVFX;
+            case VFXList.Burst: return burstVFX;
+            case VFXList.Area: return areaVFX;
+            case VFXList.Projectile: return projectileVFX;
+        }
+        return null;
     }
 
-    public void CreateBurstSkillVFX(Vector3 position, Vector3 forward, float scale = 1f, float damage = 1f)
+    public void CreateAttackVFX(Vector3 position, Vector3 forward, float scale, float damage, VFXList vfxList)
     {
-        GameObject currentVfx = Instantiate(burstVFX, position, Quaternion.identity);
+        GameObject currentVfx = Instantiate(GetPrefabBaseOnVFXList(vfxList), position, Quaternion.identity);
         currentVfx.GetComponent<PlayerVFXDamageSource>().SetupDamage(damage);
         currentVfx.transform.localScale = new Vector3(scale, scale, scale);
         currentVfx.transform.forward = forward;
-        Destroy(currentVfx, 2f);
-    }
-
-    public void CreateAreaSkillVFX(Vector3 position, Vector3 forward, float scale = 1f, float damage = 1f)
-    {
-        GameObject currentVfx = Instantiate(areaVFX, position, Quaternion.identity);
-        currentVfx.GetComponent<PlayerVFXDamageSource>().SetupDamage(damage);
-        currentVfx.transform.localScale = new Vector3(scale, scale, scale);
-        currentVfx.transform.forward = forward;
-        Destroy(currentVfx, 2f);
-    }
-
-    public void CreateProjectileSkillVFX(Vector3 position, Vector3 forward, float scale = 1f, float damage = 1f)
-    {
-        GameObject currentVfx = Instantiate(projectileVFX, position, Quaternion.identity);
-        currentVfx.GetComponent<PlayerVFXDamageSource>().SetupDamage(damage);
-        currentVfx.transform.localScale = new Vector3(scale, scale, scale);
-        currentVfx.transform.forward = forward;
-        Destroy(currentVfx, 2f);
+        Destroy(currentVfx, 1f);
     }
 }
