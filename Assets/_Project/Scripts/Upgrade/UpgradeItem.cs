@@ -1,5 +1,7 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -24,6 +26,11 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public float amountValue;
     public int upgradeCost;
 
+    public UnityEvent OnMouseEnter;
+    public UnityEvent OnMouseExit;
+    public UnityEvent OnUpgradeProgress;
+    public UnityEvent OnUpgradeUnlock;
+
     private bool isUnlocked;
     private int currentPhase = 0;
 
@@ -36,6 +43,7 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        OnMouseEnter?.Invoke();
         TooltipSystemManager.Show($"{upgradeType.ToString()} \n Amount: {amountValue} \n Cost: {upgradeCost}");
         if (isUnlocked) return;
         background.color = hoverColor;
@@ -44,6 +52,7 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        OnMouseExit?.Invoke();
         TooltipSystemManager.Hide();
         if (isUnlocked) return;
         background.gameObject.SetActive(false);
@@ -57,6 +66,7 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         currentPhase += 1;
         phaseText.text = $"{currentPhase} / {phases}";
         ApplyUpgradeEffect();
+        OnUpgradeProgress?.Invoke();
         if (currentPhase == phases)
             UnlockUpgrade();
     }
@@ -73,6 +83,7 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private void UnlockUpgrade()
     {
         isUnlocked = true;
+        OnUpgradeUnlock?.Invoke();
         background.color = unlockedColor;
     }
 }
