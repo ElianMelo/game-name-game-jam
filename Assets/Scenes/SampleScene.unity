@@ -17389,6 +17389,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 519707783395888439, guid: 45a818d40e066d0468b38c486d910a04, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4649323731830547084, guid: 45a818d40e066d0468b38c486d910a04, type: 3}
       propertyPath: m_Name
       value: Player

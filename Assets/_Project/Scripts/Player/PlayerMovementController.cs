@@ -64,7 +64,18 @@ public class PlayerMovementController : MonoBehaviour
         Vector2 movement = move.action.ReadValue<Vector2>();
         horizontalInput = movement.y * -1;
         verticalInput = movement.x;
-        playerAnimator.SetBool(MovingAnim, movement.x != 0 || movement.y != 0);
+        bool isMoving = movement.x != 0 || movement.y != 0;
+        playerAnimator.SetBool(MovingAnim, isMoving);
+
+        // Fire state change events when movement starts or stops
+        if (isMoving && playerController.CurrentState != PlayerState.Moving)
+        {
+            playerController.ChangeState(PlayerState.Moving);
+        }
+        else if (!isMoving && playerController.CurrentState == PlayerState.Moving)
+        {
+            playerController.ChangeState(PlayerState.Idling);
+        }
     }
 
     private void SpeedControl()
