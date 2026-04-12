@@ -9788,7 +9788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: blendShapeAmount
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2456245771713771915, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: m_fontAsset

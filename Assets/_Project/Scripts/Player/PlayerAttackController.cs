@@ -61,6 +61,7 @@ public class PlayerAttackController : MonoBehaviour
 
     private void AttemptAttack(InputAction.CallbackContext context)
     {
+        if (playerController.CurrentState == PlayerState.Attacking || playerController.CurrentState == PlayerState.UsingSkill) return;
         if (!canAttack) return;
         canAttack = false;
         isAttackLeft = !isAttackLeft;
