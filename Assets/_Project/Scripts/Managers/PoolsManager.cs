@@ -4,6 +4,7 @@ public class PoolsManager : MonoBehaviour
 {
     public ObjectPoolingBase crossbowArrowPool;
     public ObjectPoolingBase catapultBoulderPool;
+    public ObjectPoolingBase enemyVFXPool;
 
     public static PoolsManager Instance;
     private void Awake()
@@ -19,6 +20,11 @@ public class PoolsManager : MonoBehaviour
     public GameObject GetCatapultBoulder(float duration)
     {
         return catapultBoulderPool.GetPooledObject(duration);
+    }
+
+    public GameObject GetEnemyVFX(float duration)
+    {
+        return enemyVFXPool.GetPooledObject(duration);
     }
     
 }
