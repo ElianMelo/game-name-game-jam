@@ -66,7 +66,10 @@ public class EnemyAttackController : MonoBehaviour
     public void PerformProjectileLaunch()
     {
         var direction = enemyController.PlayerController.transform.position - transform.position;
-        var projectile = Instantiate(projectilePrefab, sphereCastOrigin.position, Quaternion.LookRotation(direction));
+        var projectile = enemyController.troopName == TroopName.Crossbow ? PoolsManager.Instance.GetCrossbowArrow(2f) : PoolsManager.Instance.GetCatapultBoulder(2f);
+        projectile.SetActive(true);
+        projectile.transform.position = sphereCastOrigin.position;
+        projectile.transform.rotation = Quaternion.LookRotation(direction);
         var enemyProjectile = projectile.GetComponent<EnemyProjectile>();
         enemyProjectile.SetupData(direction, enemyController.GetTroup().damage);
     }

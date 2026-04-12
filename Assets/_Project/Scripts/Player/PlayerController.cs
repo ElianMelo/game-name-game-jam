@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Projectile"))
         {
             ReceiveDamage(other.GetComponent<EnemyProjectile>().damage);
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
         }
     }
 }

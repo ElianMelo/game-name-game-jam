@@ -10,12 +10,9 @@ public class EnemyProjectile : MonoBehaviour
     {
         direction = newDirection;
         damage = newDamage;
-    }
-
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody>();
+        if(rb == null) rb = GetComponent<Rigidbody>();
+        rb.angularVelocity = Vector3.zero;
+        rb.linearVelocity = Vector3.zero;
         rb.AddForce(direction.normalized * 20f, ForceMode.Impulse);
-        Destroy(gameObject, 2f);
     }
 }
