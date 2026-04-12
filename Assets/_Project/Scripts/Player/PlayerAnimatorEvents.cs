@@ -30,8 +30,16 @@ public class PlayerAnimatorEvents : MonoBehaviour
         playerController.PlayerSkillController.PerformAreaSkillHitDamage();
     }
 
-    public void PerformSkillProjectileHit()
+    public void StartRollSkill()
     {
-        playerController.PlayerSkillController.PerformProjectileSkillHitDamage();
+        playerController.PlayerSkillController.StartRollSkill();
     }
+
+    public void StopRollSkill()
+    {
+        playerController.PlayerSkillController.StopRollSkill();
+        FinishAttackState();
+    }
+
+
 }
