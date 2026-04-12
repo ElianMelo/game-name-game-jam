@@ -26,6 +26,11 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public float amountValue;
     public int upgradeCost;
 
+    [Header("Blend Shape")]
+    public bool hasBlendShape;
+    public BlendShapeType blendShapeType;
+    public float blendShapeAmount;
+
     public UnityEvent OnMouseEnter;
     public UnityEvent OnMouseExit;
     public UnityEvent OnUpgradeProgress;
@@ -94,6 +99,10 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     private void ApplyUpgradeEffect()
     {
+        if (hasBlendShape)
+        {
+            KaijuUpgradeManager.Instance.Controller.PlayerBlendShapesController.AddToBlendShape(blendShapeType, blendShapeAmount);
+        }
         switch (upgradeClass)
         {
             case UpgradeClass.Kaijuu: KaijuUpgradeManager.Instance.BuyUpgrade(upgradeType, kaijuuAttributeGroup, amountValue); return;

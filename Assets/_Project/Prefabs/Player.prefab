@@ -487,6 +487,7 @@ GameObject:
   - component: {fileID: 191638297006850537}
   - component: {fileID: 5154967787236046290}
   - component: {fileID: 1853923911673436675}
+  - component: {fileID: 4359797029359811091}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -722,6 +723,19 @@ MonoBehaviour:
   burstClip: {fileID: 7400000, guid: 5e9bb3eb04174e5408f33e0a27a897a4, type: 2}
   areaClip: {fileID: 7400000, guid: 0ae6a5da1c19f5049bfe0a7f543efcb5, type: 2}
   projectileClip: {fileID: 7400000, guid: 5d71ebe7d1ec10f48b9b58ea23f0cde0, type: 2}
+--- !u!114 &4359797029359811091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4649323731830547084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b5faf50db14ec04fada1070db7e5282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlendShapesController
+  skinnedMeshRenderer: {fileID: 316996420769502592}
 --- !u!1 &8286498732737906183
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,6 +929,14 @@ PrefabInstance:
     - target: {fileID: -8907276252711696039, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
       propertyPath: m_UpdateWhenOffscreen
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8907276252711696039, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[0]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8907276252711696039, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[4]'
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8792490210414139502, guid: 78b605d2019314845a84d56c1dbd3237, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

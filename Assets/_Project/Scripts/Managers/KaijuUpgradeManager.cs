@@ -54,12 +54,18 @@ public class KaijuUpgradeManager : MonoBehaviour
     public KaijuuAttributesGroup SkillArea => _skillAOE;
     public KaijuuAttributesGroup SkillBurst => _skillBurst;
     public KaijuuAttributesGroup SkillProjectile => _skillProjectile;
+    public PlayerController Controller { get; private set; }
 
     public static KaijuUpgradeManager Instance;
 
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        Controller = FindAnyObjectByType<PlayerController>();
     }
 
     public void BuyUpgrade(UpgradeType upgradeType, KaijuuAttibuteGroupType groupType, float amount)

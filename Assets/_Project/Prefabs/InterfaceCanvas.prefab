@@ -9779,8 +9779,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 5588650775513456590}
     m_Modifications:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: hasBlendShape
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: isKaijuKnowdlge
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: blendShapeAmount
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2456245771713771915, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: m_fontAsset
