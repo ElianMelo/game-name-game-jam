@@ -490,6 +490,7 @@ GameObject:
   - component: {fileID: 1148383422008199050}
   - component: {fileID: 1723608030992917376}
   - component: {fileID: 4250489747044027889}
+  - component: {fileID: 4463737845355253369}
   m_Layer: 6
   m_Name: KnightSoldier
   m_TagString: Enemy
@@ -631,6 +632,33 @@ MonoBehaviour:
     m_Bits: 128
   projectilePrefab: {fileID: 0}
   attackClip: {fileID: 7400000, guid: ff4efef45cdb09d47bd7d0dca695e881, type: 2}
+--- !u!54 &4463737845355253369
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5596191583806849608}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &3024812423299452869
 PrefabInstance:
   m_ObjectHideFlags: 0

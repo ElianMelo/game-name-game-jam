@@ -23,7 +23,7 @@ public enum KaijuuAttibuteGroupType {
     Attack,
     SkillAOE,
     SkillBurst,
-    SkillProjectiles
+    SkillRoll
 }
 
 [Serializable]
@@ -54,12 +54,18 @@ public class KaijuUpgradeManager : MonoBehaviour
     public KaijuuAttributesGroup SkillArea => _skillAOE;
     public KaijuuAttributesGroup SkillBurst => _skillBurst;
     public KaijuuAttributesGroup SkillProjectile => _skillProjectile;
+    public PlayerController Controller { get; private set; }
 
     public static KaijuUpgradeManager Instance;
 
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        Controller = FindAnyObjectByType<PlayerController>();
     }
 
     public void BuyUpgrade(UpgradeType upgradeType, KaijuuAttibuteGroupType groupType, float amount)
@@ -70,7 +76,7 @@ public class KaijuUpgradeManager : MonoBehaviour
             {
                 case KaijuuAttibuteGroupType.SkillAOE: _skillAOE.unlocked = true; break;
                 case KaijuuAttibuteGroupType.SkillBurst: _skillBurst.unlocked = true; break;
-                case KaijuuAttibuteGroupType.SkillProjectiles: _skillProjectile.unlocked = true; break;
+                case KaijuuAttibuteGroupType.SkillRoll: _skillProjectile.unlocked = true; break;
             }
             UpgradeTreeSwitcher.UnlockKaijuuSkillTreePath?.Invoke(groupType);
         }
@@ -103,7 +109,7 @@ public class KaijuUpgradeManager : MonoBehaviour
                     case UpgradeType.Cooldown: _skillBurst.skillCooldown += amount; return;
                     default: return;
                 }
-            case KaijuuAttibuteGroupType.SkillProjectiles:
+            case KaijuuAttibuteGroupType.SkillRoll:
                 switch (upgradeType)
                 {
                     case UpgradeType.Damage: _skillProjectile.damage += amount; return;

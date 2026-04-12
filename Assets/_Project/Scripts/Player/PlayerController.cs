@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public PlayerSkillController PlayerSkillController { get; private set; }
     public PlayerMovementController PlayerMovementController { get; private set; }
     public PlayerVFXController PlayerVFXController { get; private set; }
+    public PlayerBlendShapesController PlayerBlendShapesController { get; private set; }
 
     public UnityEvent OnHurt;
     public UnityEvent OnDead;
@@ -32,6 +33,7 @@ public class PlayerController : MonoBehaviour
         PlayerSkillController = GetComponent<PlayerSkillController>();
         PlayerMovementController = GetComponent<PlayerMovementController>();
         PlayerVFXController = GetComponent<PlayerVFXController>();
+        PlayerBlendShapesController = GetComponent<PlayerBlendShapesController>();
         animator = GetComponentInChildren<Animator>();
         CurrentState = PlayerState.Idling;
         currentHealth = KaijuUpgradeManager.Instance.MaxHealth;
