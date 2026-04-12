@@ -31,7 +31,6 @@ public class EnemyController : MonoBehaviour
 
     private float currentHealth;
     private bool isDead = false;
-    private Coroutine knockbackCoroutine;
 
     public UnityEvent OnHurt;
     public UnityEvent OnDead;
@@ -96,7 +95,7 @@ public class EnemyController : MonoBehaviour
         if (isDead) return;
         currentHealth -= amount;
         OnHurt?.Invoke();
-        StartCoroutine(Knockback(transform.position - PlayerController.transform.position, 5f, 0.1f));
+        StartCoroutine(Knockback(transform.position - PlayerController.transform.position, 3f, 0.1f));
         if (currentHealth <= 0)
         {
             currentHealth = 0;
@@ -134,7 +133,7 @@ public class EnemyController : MonoBehaviour
 
     private void TriggerDeathParticle()
     {
-        GameObject enemyVFX = PoolsManager.Instance.GetEnemyVFX(2);
+        GameObject enemyVFX = enemyType == EnemyType.Moving ? PoolsManager.Instance.GetEnemyVFX(2) : PoolsManager.Instance.GetEnemyStationaryVFX(2);
         enemyVFX.SetActive(true);
         enemyVFX.transform.position = transform.position;
         enemyVFX.transform.rotation = Quaternion.Euler(0, Random.Range(0, 180), 0);
