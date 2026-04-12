@@ -6,6 +6,7 @@ public class PlayerAttackController : MonoBehaviour
     [SerializeField] private Transform sphereCastOrigin;
     [SerializeField] private InputActionReference attack;
     [SerializeField] public LayerMask layerMask;
+    [SerializeField] public AnimationClip attackClip;
 
     private Animator animator;
     private PlayerController playerController;
@@ -46,7 +47,7 @@ public class PlayerAttackController : MonoBehaviour
         currentAttackCooldown -= Time.deltaTime;
         if(currentAttackCooldown <= 0)
         {
-            currentAttackCooldown = 1 / KaijuUpgradeManager.Instance.AttackGroup.attackSpeed;
+            currentAttackCooldown = attackClip.length / KaijuUpgradeManager.Instance.AttackGroup.attackSpeed;
             canAttack = true;
         }
     }
@@ -60,6 +61,7 @@ public class PlayerAttackController : MonoBehaviour
 
     private void AttemptAttack(InputAction.CallbackContext context)
     {
+        if (playerController.CurrentState == PlayerState.Attacking || playerController.CurrentState == PlayerState.UsingSkill) return;
         if (!canAttack) return;
         canAttack = false;
         isAttackLeft = !isAttackLeft;
@@ -70,20 +72,20 @@ public class PlayerAttackController : MonoBehaviour
 
     public void PerformHitDamage()
     {
-        Collider[] hits = Physics.OverlapSphere(
-            sphereCastOrigin.position,
-            KaijuUpgradeManager.Instance.AttackGroup.range,
-            layerMask
-        );
+        //Collider[] hits = Physics.OverlapSphere(
+        //    sphereCastOrigin.position,
+        //    KaijuUpgradeManager.Instance.AttackGroup.range,
+        //    layerMask
+        //);
 
         playerController.OnAttack?.Invoke();
-        playerController.PlayerVFXController.CreateAttackSlashVFX(sphereCastOrigin.position,
-            sphereCastOrigin.forward, KaijuUpgradeManager.Instance.AttackGroup.range / 3f);
+        playerController.PlayerVFXController.CreateAttackVFX(sphereCastOrigin.position,
+            sphereCastOrigin.forward, KaijuUpgradeManager.Instance.AttackGroup.range, KaijuUpgradeManager.Instance.AttackGroup.damage, VFXList.Slash);
 
-        foreach (var hit in hits)
-        {
-            RegisterTriggerContact(hit);
-        }
+        //foreach (var hit in hits)
+        //{
+        //    RegisterTriggerContact(hit);
+        //}
     }
 
     public void RegisterTriggerContact(Collider other)

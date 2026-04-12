@@ -1,5 +1,7 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -24,6 +26,16 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public float amountValue;
     public int upgradeCost;
 
+    [Header("Blend Shape")]
+    public bool hasBlendShape;
+    public BlendShapeType blendShapeType;
+    public float blendShapeAmount;
+
+    public UnityEvent OnMouseEnter;
+    public UnityEvent OnMouseExit;
+    public UnityEvent OnUpgradeProgress;
+    public UnityEvent OnUpgradeUnlock;
+
     private bool isUnlocked;
     private int currentPhase = 0;
 
@@ -36,7 +48,8 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        TooltipSystemManager.Show($"{upgradeType.ToString()} \n Amount: {amountValue} \n Cost: {upgradeCost}");
+        OnMouseEnter?.Invoke();
+        TooltipSystemManager.Show($"{ConvertUpgradeTypeToText(upgradeType)} \n Amount: {amountValue} \n Cost: {upgradeCost}");
         if (isUnlocked) return;
         background.color = hoverColor;
         background.gameObject.SetActive(true);
@@ -44,9 +57,31 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        OnMouseExit?.Invoke();
         TooltipSystemManager.Hide();
         if (isUnlocked) return;
         background.gameObject.SetActive(false);
+    }
+
+    private string ConvertUpgradeTypeToText(UpgradeType upgradeType)
+    {   
+        switch (upgradeType)
+        {
+            case UpgradeType.Damage:
+            case UpgradeType.Range:
+            case UpgradeType.Speed:
+            case UpgradeType.Cooldown:
+            case UpgradeType.Health:
+            case UpgradeType.Unlock:
+                return upgradeType.ToString();
+            case UpgradeType.AttackSpeed:
+                return "Attack Speed";
+            case UpgradeType.SpawnAmount:
+                return "Spawn Units";
+            case UpgradeType.SpawnSpeed:
+                return "Spawn Speed";
+        }
+        return "";
     }
 
     private void AttempBuyUpgrade()
@@ -57,12 +92,17 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         currentPhase += 1;
         phaseText.text = $"{currentPhase} / {phases}";
         ApplyUpgradeEffect();
+        OnUpgradeProgress?.Invoke();
         if (currentPhase == phases)
             UnlockUpgrade();
     }
 
     private void ApplyUpgradeEffect()
     {
+        if (hasBlendShape)
+        {
+            KaijuUpgradeManager.Instance.Controller.PlayerBlendShapesController.AddToBlendShape(blendShapeType, blendShapeAmount);
+        }
         switch (upgradeClass)
         {
             case UpgradeClass.Kaijuu: KaijuUpgradeManager.Instance.BuyUpgrade(upgradeType, kaijuuAttributeGroup, amountValue); return;
@@ -73,6 +113,7 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private void UnlockUpgrade()
     {
         isUnlocked = true;
+        OnUpgradeUnlock?.Invoke();
         background.color = unlockedColor;
     }
 }

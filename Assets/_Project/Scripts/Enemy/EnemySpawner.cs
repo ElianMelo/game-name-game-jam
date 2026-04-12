@@ -7,7 +7,10 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject riderPrefab;
     [SerializeField] private GameObject crossbowPrefab;
     [SerializeField] private GameObject catapultPrefab;
-    [SerializeField] private List<Transform> spawnPoints = new();
+    [SerializeField] private Transform bottomLeft;
+    [SerializeField] private Transform topLeft;
+    [SerializeField] private Transform bottomRight;
+    [SerializeField] private Transform topRight;
 
     private float currentSpawnTime = 0;
 
@@ -34,8 +37,13 @@ public class EnemySpawner : MonoBehaviour
         currentSpawnTime = 1 / currentGroup.spawnSpeed;
         for (int i = 0; i < currentGroup.spawnAmount; i++)
         {
-            GameObject enemyObj = Instantiate(GetPrefabBasedOnName(troopName), spawnPoints[Random.Range(0, spawnPoints.Count)].position, Quaternion.identity);
+            GameObject enemyObj = Instantiate(GetPrefabBasedOnName(troopName), GetRandomSpawnPosition(), Quaternion.identity);
         }
+    }
+    private Vector3 GetRandomSpawnPosition()
+    {
+        Vector3 position = new Vector3(Random.Range(bottomLeft.position.x, topLeft.position.x), 0, Random.Range(bottomLeft.position.z, bottomRight.position.z));
+        return position;
     }
 
     private GameObject GetPrefabBasedOnName(TroopName troopName)
@@ -43,9 +51,9 @@ public class EnemySpawner : MonoBehaviour
         switch (troopName)
         {
             case TroopName.Soldier: return soldierPrefab;
-            case TroopName.Rider: return soldierPrefab;
+            case TroopName.Rider: return riderPrefab;
             case TroopName.Crossbow: return crossbowPrefab;
-            case TroopName.Catapult: return crossbowPrefab;
+            case TroopName.Catapult: return catapultPrefab;
         }
         return null;
     }
