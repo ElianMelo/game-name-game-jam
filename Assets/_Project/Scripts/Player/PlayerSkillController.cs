@@ -14,6 +14,7 @@ public class PlayerSkillController : MonoBehaviour
     [SerializeField] public AnimationClip burstClip;
     [SerializeField] public AnimationClip areaClip;
     [SerializeField] public AnimationClip projectileClip;
+    [SerializeField] public GameObject rollSkillVFX;
 
     private Animator animator;
     private PlayerController playerController;
@@ -24,7 +25,7 @@ public class PlayerSkillController : MonoBehaviour
 
     private const string SkillBurstAnim = "SkillBurst";
     private const string SkillAreaAnim = "SkillArea";
-    private const string SkillProjectileAnim = "SkillProjectile";
+    private const string SkillProjectileAnim = "SkillRoll";
 
     private void Awake()
     {
@@ -137,5 +138,15 @@ public class PlayerSkillController : MonoBehaviour
     {
         playerController.PlayerVFXController.CreateAttackVFX(skillProjectileOrigin.position,
             skillProjectileOrigin.forward, KaijuUpgradeManager.Instance.SkillProjectile.range, KaijuUpgradeManager.Instance.SkillProjectile.damage, VFXList.Projectile);
+    }
+
+    public void StartRollSkill()
+    {
+        rollSkillVFX.SetActive(true);
+    }
+
+    public void StopRollSkill()
+    {
+        rollSkillVFX.SetActive(false);
     }
 }

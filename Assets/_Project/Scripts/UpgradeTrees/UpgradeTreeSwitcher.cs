@@ -52,7 +52,7 @@ public class UpgradeTreeSwitcher : MonoBehaviour
         {
             case KaijuuAttibuteGroupType.SkillAOE: UnlockAreaTree(); return;
             case KaijuuAttibuteGroupType.SkillBurst: UnlockBurstTree(); return;
-            case KaijuuAttibuteGroupType.SkillProjectiles: UnlockProjectileTree(); return;
+            case KaijuuAttibuteGroupType.SkillRoll: UnlockRollTree(); return;
         }
     }
 
@@ -111,7 +111,7 @@ public class UpgradeTreeSwitcher : MonoBehaviour
     {
         unlockAreaTree.SetActive(true);
     }
-    private void UnlockProjectileTree()
+    private void UnlockRollTree()
     {
         unlockProjectileTree.SetActive(true);
     }

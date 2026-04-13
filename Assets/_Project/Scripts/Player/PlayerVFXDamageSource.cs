@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerVFXDamageSource : MonoBehaviour
 {
     public float damage;
+    public bool isRollSKill = false;
     private Collider vfxCollider;
     public void SetupDamage(float newDamage)
     {
@@ -13,7 +14,8 @@ public class PlayerVFXDamageSource : MonoBehaviour
         IEnumerator DisableCollider()
         {
             yield return new WaitForSeconds(0.1f);
-            vfxCollider.enabled = false;
+            if(!isRollSKill)
+                vfxCollider.enabled = false;
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -21,7 +23,8 @@ public class PlayerVFXDamageSource : MonoBehaviour
         if(other.CompareTag("Enemy"))
         {
             other.GetComponent<EnemyController>().ReceiveDamage(damage);
-            Physics.IgnoreCollision(vfxCollider, other);
+            if(!isRollSKill)
+                Physics.IgnoreCollision(vfxCollider, other);
         }
     }
 }
