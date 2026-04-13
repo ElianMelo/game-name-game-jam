@@ -96,12 +96,18 @@ public class EnemyController : MonoBehaviour
         currentHealth -= amount;
         OnHurt?.Invoke();
         StartCoroutine(Knockback(transform.position - PlayerController.transform.position, 3f, 0.1f));
+        if (enemyType == EnemyType.Moving) 
+            SoundManager.Instance.MovingEnemyHit();
+        else SoundManager.Instance.StationaryEnemyHit();
         if (currentHealth <= 0)
         {
             currentHealth = 0;
             healthBar.UpdateHealth(currentHealth, health);
             GameManager.Instance.AddKaijuuKnowledge(5);
             OnDead?.Invoke();
+            if (enemyType == EnemyType.Moving)
+                SoundManager.Instance.MovingEnemyDeath();
+            else SoundManager.Instance.StationaryEnemyDeath();
             TriggerDeathParticle();
             Death();
         } else

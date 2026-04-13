@@ -391,7 +391,7 @@ MonoBehaviour:
     - rid: 7924960045022314704
       type: {class: MMF_AudioSource, ns: MoreMountains.Feedbacks, asm: MoreMountains.Tools}
       data:
-        Active: 1
+        Active: 0
         UniqueID: 1947701930
         Label: AudioSource
         OriginalLabel: AudioSource
