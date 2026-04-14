@@ -64,6 +64,7 @@ public class PlayerAttackController : MonoBehaviour
         if (playerController.CurrentState == PlayerState.Attacking || playerController.CurrentState == PlayerState.UsingSkill) return;
         if (!canAttack) return;
         canAttack = false;
+        SoundManager.Instance.PlayerClawAttack();
         isAttackLeft = !isAttackLeft;
         animator.SetTrigger(isAttackLeft ? AttackLeftAnim : AttackRightAnim);
         animator.speed = KaijuUpgradeManager.Instance.AttackGroup.attackSpeed;

@@ -49,6 +49,7 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void OnPointerEnter(PointerEventData eventData)
     {
         OnMouseEnter?.Invoke();
+        SoundManager.Instance.UIHover();
         TooltipSystemManager.Show($"{ConvertUpgradeTypeToText(upgradeType)} \n Amount: {amountValue} \n Cost: {upgradeCost}");
         if (isUnlocked) return;
         background.color = hoverColor;
@@ -89,6 +90,7 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if (isUnlocked) return;
         bool brought = isKaijuKnowdlge ? GameManager.Instance.AttemptRemoveKaijuuKnowledge(upgradeCost) : GameManager.Instance.AttemptRemoveTroopDamage(upgradeCost);
         if (!brought) return;
+        SoundManager.Instance.UIBuy();
         currentPhase += 1;
         phaseText.text = $"{currentPhase} / {phases}";
         ApplyUpgradeEffect();
@@ -102,6 +104,10 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if (hasBlendShape)
         {
             KaijuUpgradeManager.Instance.Controller.PlayerBlendShapesController.AddToBlendShape(blendShapeType, blendShapeAmount);
+        }
+        if(upgradeType == UpgradeType.Unlock)
+        {
+            SoundManager.Instance.UIUnlock();
         }
         switch (upgradeClass)
         {

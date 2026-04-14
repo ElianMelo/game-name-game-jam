@@ -70,6 +70,7 @@ public class PlayerSkillController : MonoBehaviour
         if (GameManager.Instance.currentState != GameState.KaijuControl) return;
         if (!KaijuUpgradeManager.Instance.SkillBurst.unlocked) return;
         if (!canUseSkillBurst) return;
+        SoundManager.Instance.PlayerBurstSkill();
         playerController.OnSkill?.Invoke();
         canUseSkillBurst = false;
         animator.SetTrigger(SkillBurstAnim);
@@ -89,6 +90,7 @@ public class PlayerSkillController : MonoBehaviour
         if (GameManager.Instance.currentState != GameState.KaijuControl) return;
         if (!KaijuUpgradeManager.Instance.SkillArea.unlocked) return;
         if (!canUseSkillArea) return;
+        SoundManager.Instance.PlayerAreaSkill();
         playerController.OnSkill?.Invoke();
         canUseSkillArea = false;
         animator.SetTrigger(SkillAreaAnim);
@@ -109,6 +111,7 @@ public class PlayerSkillController : MonoBehaviour
         if (GameManager.Instance.currentState != GameState.KaijuControl) return;
         if (!KaijuUpgradeManager.Instance.SkillProjectile.unlocked) return;
         if (!canUseSkillProjectile) return;
+        SoundManager.Instance.PlayerRollSkill();
         playerController.OnSkill?.Invoke();
         canUseSkillProjectile = false;
         animator.SetTrigger(SkillProjectileAnim);

@@ -47,7 +47,11 @@ public class GameManager : MonoBehaviour
 
     public bool AttemptRemoveKaijuuKnowledge(int amount)
     {
-        if (amount > kaijuuKnowledge) return false;
+        if (amount > kaijuuKnowledge)
+        {
+            SoundManager.Instance.UINoFounds();
+            return false;
+        }
         kaijuuKnowledge -= amount;
         InterfaceManager.Instance.UpdateKaijuKnowledge(kaijuuKnowledge);
         return true;
@@ -61,7 +65,10 @@ public class GameManager : MonoBehaviour
 
     public bool AttemptRemoveTroopDamage(int amount)
     {
-        if (amount > troopDamage) return false;
+        if (amount > troopDamage) {
+            SoundManager.Instance.UINoFounds();
+            return false; 
+        }
         troopDamage -= amount;
         InterfaceManager.Instance.UpdateTroopDamage(troopDamage);
         return true;
