@@ -84,6 +84,7 @@ public class UpgradeTreeSwitcher : MonoBehaviour
 
     private void OnPlayGameButtonPressed()
     {
+        SoundManager.Instance.UIStartBattle();
         GameManager.Instance.EndUpgradePhase();
     }
 
@@ -93,6 +94,7 @@ public class UpgradeTreeSwitcher : MonoBehaviour
         troopsTreeControl.HideVisuals();
         kaijuuTreeSelected.SetActive(true);
         troopsTreeSelected.SetActive(false);
+        SoundManager.Instance.UISwitchTab();
     }
 
     private void SwitchTroopsTree()
@@ -101,6 +103,7 @@ public class UpgradeTreeSwitcher : MonoBehaviour
         kaijuuTreeControl.HideVisuals();
         troopsTreeSelected.SetActive(true);
         kaijuuTreeSelected.SetActive(false);
+        SoundManager.Instance.UISwitchTab();
     }
 
     private void UnlockBurstTree()
