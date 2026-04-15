@@ -145,6 +145,7 @@ public class PlayerSkillController : MonoBehaviour
 
     public void StartRollSkill()
     {
+        rollSkillVFX.GetComponent<PlayerVFXDamageSource>().SetupDamage(KaijuUpgradeManager.Instance.SkillProjectile.damage);
         rollSkillVFX.SetActive(true);
     }
 

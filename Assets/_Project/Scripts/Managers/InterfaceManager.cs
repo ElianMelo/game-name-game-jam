@@ -20,7 +20,7 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField] private Button playAgainGameButton;
 
     private float currentProgress;
-    private float maxProgress = 10f;
+    private float maxProgress = 198f;
 
     private void Awake()
     {

@@ -7121,7 +7121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1496558209802167902, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1708627789562791793, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7183,6 +7183,14 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2474199297032674229, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
+      propertyPath: phases
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727516059515605030, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
+      propertyPath: phases
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2924618859739163524, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7242,6 +7250,10 @@ PrefabInstance:
     - target: {fileID: 3284340211108480019, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411665872534490993, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
+      propertyPath: phases
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3411665872534490993, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
       propertyPath: amountValue
@@ -7373,7 +7385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5245940079933492202, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5493633151853664854, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
       propertyPath: amountValue
@@ -7384,12 +7396,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5876026606043999288, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
+      propertyPath: phases
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5876026606043999288, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
       propertyPath: amountValue
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5904315323901916989, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5982605637492104750, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7464,12 +7480,20 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6247101207103525796, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
+      propertyPath: phases
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247101207103525796, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
       propertyPath: amountValue
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6427912074015096835, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
       propertyPath: upgradeCost
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6474809288968172073, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
+      propertyPath: phases
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6704061604644334298, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7609,6 +7633,14 @@ PrefabInstance:
     - target: {fileID: 7987730668152838158, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541028913438931688, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
+      propertyPath: phases
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598335622915643776, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
+      propertyPath: phases
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8598335622915643776, guid: a430c295534a084468cd3d0c8a8d6ec9, type: 3}
       propertyPath: amountValue
