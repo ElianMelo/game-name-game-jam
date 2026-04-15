@@ -14710,6 +14710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerVFXDamageSource
   damage: 0
+  isRollSKill: 0
 --- !u!135 &3872952450240884713
 SphereCollider:
   m_ObjectHideFlags: 0
