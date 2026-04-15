@@ -4507,7 +4507,7 @@ MonoBehaviour:
         Owner: {fileID: 6974022206541619255}
         DebugActive: 0
         Source: 0
-        Sfx: {fileID: 8300000, guid: b1ac4c3be69ab174e9e565318f899878, type: 3}
+        Sfx: {fileID: 8300000, guid: 7e63020d53d815247af71b95ac415108, type: 3}
         AudioResourceToPlay: {fileID: 0}
         RandomSfx: []
         SequentialOrder: 0
@@ -4805,6 +4805,7 @@ MonoBehaviour:
   timerCurrentAmount: 15
   kaijuuKnowledge: 0
   troopDamage: 0
+  shouldEndGame: 0
   currentState: 1
 --- !u!114 &4218587640172383681
 MonoBehaviour:
@@ -4831,7 +4832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 614edb33c38bcf949846d5675f29f9fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MoreMountains.Tools::MoreMountains.Tools.MMSoundManager
-  AutomaticallyUnparentOnAwake: 1
+  AutomaticallyUnparentOnAwake: 0
   settingsSo: {fileID: 11400000, guid: 07ea3ff88e1ecb84d91f58aa804badc6, type: 2}
   AudioSourcePoolSize: 10
   PoolCanExpand: 1
@@ -5085,7 +5086,7 @@ MonoBehaviour:
         Owner: {fileID: 2897847425269285425}
         DebugActive: 0
         Source: 0
-        Sfx: {fileID: 8300000, guid: b1ac4c3be69ab174e9e565318f899878, type: 3}
+        Sfx: {fileID: 8300000, guid: 45da30ba894195c4887c842fa3e1c8b9, type: 3}
         AudioResourceToPlay: {fileID: 0}
         RandomSfx: []
         SequentialOrder: 0
@@ -5592,7 +5593,7 @@ MonoBehaviour:
         Owner: {fileID: 136995626980552566}
         DebugActive: 0
         Source: 0
-        Sfx: {fileID: 8300000, guid: b1ac4c3be69ab174e9e565318f899878, type: 3}
+        Sfx: {fileID: 8300000, guid: b3d9e534cbe5a3b44908278913aa1d8c, type: 3}
         AudioResourceToPlay: {fileID: 0}
         RandomSfx: []
         SequentialOrder: 0
@@ -5958,7 +5959,7 @@ MonoBehaviour:
         Owner: {fileID: 2673203030004336049}
         DebugActive: 0
         Source: 0
-        Sfx: {fileID: 8300000, guid: be037f05170b4784087f0a82d948f95a, type: 3}
+        Sfx: {fileID: 8300000, guid: a036855d68ed80e4ea3038c094d20579, type: 3}
         AudioResourceToPlay: {fileID: 0}
         RandomSfx: []
         SequentialOrder: 0
@@ -6324,7 +6325,7 @@ MonoBehaviour:
         Owner: {fileID: 4416903755505922269}
         DebugActive: 0
         Source: 0
-        Sfx: {fileID: 8300000, guid: b1ac4c3be69ab174e9e565318f899878, type: 3}
+        Sfx: {fileID: 8300000, guid: 32b34049279a3564eabf9ce128b682a9, type: 3}
         AudioResourceToPlay: {fileID: 0}
         RandomSfx: []
         SequentialOrder: 0

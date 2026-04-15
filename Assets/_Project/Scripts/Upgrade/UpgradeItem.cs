@@ -109,6 +109,7 @@ public class UpgradeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         {
             SoundManager.Instance.UIUnlock();
         }
+        InterfaceManager.Instance.UpdateProgressBar();
         switch (upgradeClass)
         {
             case UpgradeClass.Kaijuu: KaijuUpgradeManager.Instance.BuyUpgrade(upgradeType, kaijuuAttributeGroup, amountValue); return;

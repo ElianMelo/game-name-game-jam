@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public int kaijuuKnowledge;
     public int troopDamage;
 
+    public bool shouldEndGame = false;
+
     public GameState currentState;
 
     public static GameManager Instance;
@@ -29,14 +31,19 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        currentState = GameState.Pause;
         timerCurrentAmount = timerMaxAmount;
-        EndUpgradePhase();
     }
 
     void Update()
     {
         UpdateGameTimer();
         InterfaceManager.Instance.UpdateTimer(timerCurrentAmount);
+    }
+
+    public void FlagToEndGame()
+    {
+        shouldEndGame = true;
     }
 
     public void AddKaijuuKnowledge(int amount)
@@ -81,6 +88,12 @@ public class GameManager : MonoBehaviour
         if (timerCurrentAmount <= 0)
         {
             timerCurrentAmount = 0;
+            if(shouldEndGame)
+            {
+                ChangeGameState(GameState.Upgrade);
+                InterfaceManager.Instance.ShowEndGameScreen();
+                return;
+            }
             ChangeGameState(GameState.Upgrade);
         }
     }
@@ -91,7 +104,7 @@ public class GameManager : MonoBehaviour
         ChangeGameState(GameState.KaijuControl);
     }
 
-    private void ChangeGameState(GameState newState)
+    public void ChangeGameState(GameState newState)
     {
         currentState = newState;
         OnGameStateChanged?.Invoke(currentState);
