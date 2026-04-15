@@ -6743,6 +6743,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
       value: 5
       objectReference: {fileID: 0}
@@ -7039,6 +7043,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
       value: 2
       objectReference: {fileID: 0}
@@ -7179,6 +7187,10 @@ PrefabInstance:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -7327,6 +7339,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
       value: 1
       objectReference: {fileID: 0}
@@ -7467,6 +7483,10 @@ PrefabInstance:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -7619,6 +7639,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
       value: 2
       objectReference: {fileID: 0}
@@ -7763,6 +7787,10 @@ PrefabInstance:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -7912,7 +7940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeCost
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -8069,6 +8097,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
       value: 3
       objectReference: {fileID: 0}
@@ -8219,6 +8251,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
       value: 7
       objectReference: {fileID: 0}
@@ -8365,6 +8401,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
       value: 3
       objectReference: {fileID: 0}
@@ -8509,6 +8549,10 @@ PrefabInstance:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -8663,6 +8707,10 @@ PrefabInstance:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -8949,6 +8997,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
       value: 5
       objectReference: {fileID: 0}
@@ -9089,6 +9141,10 @@ PrefabInstance:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -9233,6 +9289,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeClass
       value: 1
       objectReference: {fileID: 0}
@@ -9369,6 +9429,10 @@ PrefabInstance:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -9651,6 +9715,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
       value: 3
       objectReference: {fileID: 0}
@@ -9806,7 +9874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeCost
-      value: 10
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -9950,6 +10018,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4530508302590991322}
     m_Modifications:
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: isKaijuKnowdlge
       value: 1
@@ -10095,6 +10167,10 @@ PrefabInstance:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -10251,6 +10327,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
       value: 3
       objectReference: {fileID: 0}
@@ -10401,6 +10481,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
       value: 6
       objectReference: {fileID: 0}
@@ -10545,6 +10629,10 @@ PrefabInstance:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -10702,7 +10790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeCost
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -11006,7 +11094,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeCost
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -11153,6 +11241,10 @@ PrefabInstance:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -11305,6 +11397,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
       value: 7
       objectReference: {fileID: 0}
@@ -11442,6 +11538,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5588650775513456590}
     m_Modifications:
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: hasBlendShape
       value: 1
@@ -11593,6 +11693,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
       value: 1
       objectReference: {fileID: 0}
@@ -11737,6 +11841,10 @@ PrefabInstance:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -11885,6 +11993,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
       value: 1
       objectReference: {fileID: 0}
@@ -12025,6 +12137,10 @@ PrefabInstance:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -12323,6 +12439,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
       value: 1
       objectReference: {fileID: 0}
@@ -12456,6 +12576,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4493257677698412155}
     m_Modifications:
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeClass
       value: 1
@@ -12597,6 +12721,10 @@ PrefabInstance:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -12745,6 +12873,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeClass
       value: 1
       objectReference: {fileID: 0}
@@ -12877,6 +13009,10 @@ PrefabInstance:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: troopName
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeClass
@@ -13019,6 +13155,10 @@ PrefabInstance:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -13172,7 +13312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeCost
-      value: 10
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -13334,7 +13474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeCost
-      value: 10
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -13485,6 +13625,10 @@ PrefabInstance:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
@@ -13639,6 +13783,10 @@ PrefabInstance:
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: amountValue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
+      propertyPath: upgradeCost
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 835654736992122049, guid: dbd104edd768a1b4c8a4d33b8fdf06df, type: 3}
       propertyPath: upgradeType
